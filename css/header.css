@@ -1,0 +1,85 @@
+header {
+  height: 80px;
+  background-color: #DE3E26;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header .logo .logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header .logo .logo-link img.i-logo {
+  height: 50px;
+  width: 58px;
+  margin-right: 20px;
+}
+
+header .header .logo .logo-link img.i-name {
+  height: 26px;
+  width: 210px;
+}
+
+header .header .address-string {
+  position: relative;
+}
+
+header .header .address-string .address {
+  height: 30px;
+  width: 550px;
+  padding: 0 10px 0 27px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #4B4B4B;
+}
+
+header .header .address-string .map {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .header .action-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=header.css.map */

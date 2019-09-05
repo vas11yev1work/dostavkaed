@@ -1,0 +1,61 @@
+$main: #2A2A2A;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+button,
+input{
+    outline: none;
+}
+
+button,
+input[type=submit]{
+    cursor: pointer;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    main{
+        flex: 1 1;
+        margin-top: 80px;
+    }
+    footer{
+        flex: 0 1;
+    }
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header-container{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.container{
+    width: 1040px;
+    margin: 0 auto;
+} 
+
+.default-title{
+    font-size: 24px;
+    color: $main;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,259 @@
+$white: #FFFFFF;
+$black: #4B4B4B;
+$red: #DE3E26;
+$border: #D2D2D2;
+$main: #2A2A2A;
+$grey: #858585;
+
+main{
+    .photo-block{
+        background-image: url('../img/main.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px 0;
+        color: $white;
+        height: 170px;
+        .content{
+            h1{
+                font-size: 40px;
+            }
+            span{
+                font-size: 22px;
+            }
+        }
+    }
+    .categories-block{
+        .content{
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            .categories{
+                display: flex;
+                .category-item{
+                    margin-right: 15px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            .other{
+                .other-button{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span{
+                        margin-right: 10px;
+                    }
+                    img{
+                        width: 10px;
+                        transform: translateY(1px);
+                    }
+                }
+            }
+        }
+    }
+    .search-block{
+        margin-bottom: 30px;
+        .content{
+            position: relative;
+            width: 100%;
+            .search{
+                width: 100%;
+                height: 38px;
+                padding: 0 20px 0 47px;
+                border: 1px solid $border;
+                border-radius: 4px;
+            }
+            img{
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .action-block{
+        margin-bottom: 30px;
+        .content{
+            .action-list{
+                // Временно, пока не будет слайдера
+                display: flex;
+                justify-content: space-between;
+                .action-item{
+                    width: 245px;
+                    height: 150px;
+                    border-radius: 10px;
+                    .action{
+                        display: block;
+                        position: relative;
+                        box-shadow: 0 3px 6px rgba(0,0,0,.16);
+                        border-radius: 10px;
+                        overflow: hidden;
+                        cursor: pointer;
+                        &:hover{
+                            .background{
+                                transform: scale(1.05);
+                            }
+                        }
+                        .background{
+                            transition: 0.2s;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+                        .info-block{
+                            padding: 0 13px;
+                            border-radius: 0 0 10px 10px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            height: 70px;
+                            background-color: $white;
+                            .label{
+                                transform: translateY(-13px);
+                                display: flex;
+                                align-items: flex-end;
+                                .i-label{
+                                    height: 40px;
+                                    width: 40px;
+                                }
+                                .action-title{
+                                    transform: translate(2px, -2px);
+                                    color: $red;
+                                    width: calc(100% - 40px);
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            .action-information{
+                                transform: translateY(-13px);
+                                p{
+                                    color: $main;
+                                    font-weight: 700;
+                                    line-height: 1;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .restaurant-block{
+        .content{
+            .restaurant-list{
+                margin-bottom: 40px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 40px;
+                .restaurant-item{
+                    display: block;
+                    width: 320px;
+                    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+                    border-radius: 10px;
+                    &:hover{
+                        .restaurant-image{
+                            .rest{
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                    .restaurant-image{
+                        height: 170px;
+                        overflow: hidden;
+                        border-radius: 10px 10px 0 0;
+                        position: relative;
+                        .rest{
+                            height: 170px;
+                            width: 320px;
+                            object-fit: cover;
+                            border-radius: 10px 10px 0 0;
+                            display: flex;
+                            transition: 0.2s;
+                        }
+                        .rest-label{
+                            bottom: 15px;
+                            right: 15px;
+                            position: absolute;
+                        }
+                    }
+                    .restaurant-information{
+                        display: block;
+                        padding: 10px 15px;
+                        background-color: $white;
+                        border-radius: 0 0 10px 10px;
+                        .restaurant-title{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            h4{
+                                font-size: 22px;
+                                color: $main;
+                                width: 100%;
+                            }
+                            .stars{
+                                width: 70px;
+                                color: $red;
+                                font-size: 18px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                img{
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                        .restaurant-text-labels{
+                            margin-bottom: 10px;
+                            .text-labels{
+                                display: flex;
+                                flex-wrap: wrap;
+                                .text-label{
+                                    font-size: 14px;
+                                    color: $grey;
+                                    position: relative;
+                                    margin-right: 7px;
+                                    &::after{
+                                        content: '•';
+                                        margin-left: 7px;
+                                    }
+                                    &:last-child{
+                                        &::after{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .delivery-info{
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            .delivery{
+                                margin-right: 25px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                display: flex;
+                                align-items: center;
+                                img{
+                                    margin-right: 5px;
+                                }
+                                span{
+                                    font-size: 14px;
+                                    color: $grey;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

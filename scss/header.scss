@@ -1,0 +1,58 @@
+$red: #DE3E26;
+$white: #FFFFFF;
+$gray: #AAAAAA;
+$black: #4B4B4B;
+
+header{
+    height: 80px;
+    background-color: $red;
+    box-shadow: 0 2px 3px rgba(0,0,0,.16);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            display: flex;
+            align-items: center;
+            .logo-link{
+                display: flex;
+                align-items: center;
+                img.i-logo{
+                    height: 50px;
+                    width: 58px;
+                    margin-right: 20px;
+                }
+                img.i-name{
+                    height: 26px;
+                    width: 210px;
+                }
+            }
+        }
+        .address-string{
+            position: relative;
+            .address{
+                height: 30px;
+                width: 550px;
+                padding: 0 10px 0 27px;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                color: $black;
+            }
+            .map{
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+            }
+        }
+        .action-buttons{
+            display: flex;
+        }
+    }
+}

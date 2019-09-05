@@ -1,0 +1,11 @@
+<svg id="время" xmlns="http://www.w3.org/2000/svg" width="16.1" height="16.1" viewBox="0 0 16.1 16.1">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b4b4b;
+      }
+    </style>
+  </defs>
+  <path id="Path_98" data-name="Path 98" class="cls-1" d="M8.05,0A8.05,8.05,0,1,0,16.1,8.05,8.074,8.074,0,0,0,8.05,0Zm0,14.49a6.44,6.44,0,1,1,6.44-6.44A6.459,6.459,0,0,1,8.05,14.49Z"/>
+  <path id="Path_99" data-name="Path 99" class="cls-1" d="M230.708,127.5H229.5v4.83l4.186,2.576.644-1.047-3.622-2.173Z" transform="translate(-222.255 -123.475)"/>
+</svg>

@@ -1,0 +1,71 @@
+button {
+  font-size: 14px;
+}
+
+.white-active-button {
+  position: relative;
+  height: 38px;
+  padding: 0 25px;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.white-active-button:last-child {
+  margin-right: 0;
+}
+
+.white-active-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.white-active-button:hover::before {
+  opacity: 1;
+}
+
+.active-other-rest {
+  height: 50px;
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #DE3E26;
+  border: 2px solid #DE3E26;
+  border-radius: 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.active-other-rest:hover {
+  background-color: #DE3E26;
+  color: #FFFFFF;
+}
+
+.cat-button {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  height: 38px;
+  padding: 0 20px;
+  color: #4B4B4B;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+.cat-button:hover {
+  background-color: #ECECEC;
+}
+/*# sourceMappingURL=buttons.css.map */

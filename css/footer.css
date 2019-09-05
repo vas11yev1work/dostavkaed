@@ -1,0 +1,111 @@
+footer {
+  padding: 20px 0;
+  margin-top: 40px;
+  background-color: #ECECEC;
+}
+
+footer .footer .line {
+  border: none;
+  border-top: 1px solid #858585;
+  margin: 20px 0;
+}
+
+footer .footer .main-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer .main-footer .left .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+footer .footer .main-footer .left .logo .f-logo {
+  margin-right: 15px;
+}
+
+footer .footer .main-footer .left .footer-pages .page {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+footer .footer .main-footer .left .footer-pages .page:last-child {
+  margin-bottom: 0;
+}
+
+footer .footer .main-footer .left .footer-pages .page a {
+  color: #858585;
+}
+
+footer .footer .main-footer .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer .main-footer .right .apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer .main-footer .right .apps a {
+  display: block;
+  margin-right: 10px;
+}
+
+footer .footer .main-footer .right .apps a:last-child {
+  margin-right: 0;
+}
+
+footer .footer .main-footer .right .networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer .main-footer .right .networks .network {
+  margin-right: 7px;
+}
+
+footer .footer .main-footer .right .networks .network:last-child {
+  margin-right: 0;
+}
+
+footer .footer .info-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #858585;
+  font-size: 14px;
+}
+
+footer .footer .info-footer a {
+  color: #858585;
+}
+/*# sourceMappingURL=footer.css.map */
