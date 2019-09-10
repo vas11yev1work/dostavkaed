@@ -357,12 +357,140 @@ main{
         box-shadow: 0 1px 5px rgba(0,0,0,.16);
         border-radius: 6px;
         margin-bottom: 20px;
+        color: $black;
         &:last-child{
             margin-bottom: 0;
+        }
+        .line{
+            width: 100%;
+            border: 1px solid $border;
+            border-bottom: none;
+            margin: 20px 0;
+        }
+        
+        .order-data{
+            margin-top: 15px;
+            span{
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-size: 14px;
+                color: $grey;
+            }
+        }
+        .order-content{
+            margin-bottom: 20px;
+            color: $black;
+            .order-list{
+                margin-bottom: 20px;
+                margin-left: 15px;
+                .order-item{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        height: 6px;
+                        width: 6px;
+                        border-radius: 50%;
+                        background-color: $black;
+                        transform: translateX(-15px);
+                    }
+                    .order-list-name{
+                        width: calc(100% - 120px);
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    .order-list-data{
+                        span{
+                            margin-right: 10px;
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .promocode{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 14px;
+            }
+        }
+        .order-num{
+            margin-bottom: 15px;
+            span{
+                color: $grey;
+                font-size: 14px;
+            }
         }
         .info-block-title{
             h3{
                 font-size: 18px;
+            }
+        }
+        .order-block-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                font-size: 18px;
+            }
+            .r-name{
+                width: calc(100% - 100px);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+        .ct-content{
+            padding: 30px 0 0 0;
+            .ct-text{
+                font-size: 14px;
+                color: $black;
+                text-align: justify;
+                margin-bottom: 15px;
+                a{
+                    color: $red;
+                    text-decoration: underline;
+                }
+            }
+            .ct-list{
+                .ct-item{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    .name{
+                        color: $grey;
+                    }
+                    .value{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        span{
+                            display: block;
+                            &.link{
+                                a{
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .content{

@@ -505,14 +505,191 @@ main .info-block {
           box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
   border-radius: 6px;
   margin-bottom: 20px;
+  color: #4B4B4B;
 }
 
 main .info-block:last-child {
   margin-bottom: 0;
 }
 
+main .info-block .line {
+  width: 100%;
+  border: 1px solid #D2D2D2;
+  border-bottom: none;
+  margin: 20px 0;
+}
+
+main .info-block .order-data {
+  margin-top: 15px;
+}
+
+main .info-block .order-data span {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+  color: #858585;
+}
+
+main .info-block .order-content {
+  margin-bottom: 20px;
+  color: #4B4B4B;
+}
+
+main .info-block .order-content .order-list {
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+main .info-block .order-content .order-list .order-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+main .info-block .order-content .order-list .order-item:last-child {
+  margin-bottom: 0;
+}
+
+main .info-block .order-content .order-list .order-item::before {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #4B4B4B;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+main .info-block .order-content .order-list .order-item .order-list-name {
+  width: calc(100% - 120px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+main .info-block .order-content .order-list .order-item .order-list-data span {
+  margin-right: 10px;
+}
+
+main .info-block .order-content .order-list .order-item .order-list-data span:last-child {
+  margin-right: 0;
+}
+
+main .info-block .order-content .promocode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+main .info-block .order-num {
+  margin-bottom: 15px;
+}
+
+main .info-block .order-num span {
+  color: #858585;
+  font-size: 14px;
+}
+
 main .info-block .info-block-title h3 {
   font-size: 18px;
+}
+
+main .info-block .order-block-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .info-block .order-block-title h3 {
+  font-size: 18px;
+}
+
+main .info-block .order-block-title .r-name {
+  width: calc(100% - 100px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+main .info-block .ct-content {
+  padding: 30px 0 0 0;
+}
+
+main .info-block .ct-content .ct-text {
+  font-size: 14px;
+  color: #4B4B4B;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+main .info-block .ct-content .ct-text a {
+  color: #DE3E26;
+  text-decoration: underline;
+}
+
+main .info-block .ct-content .ct-list .ct-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+main .info-block .ct-content .ct-list .ct-item:last-child {
+  margin-bottom: 0;
+}
+
+main .info-block .ct-content .ct-list .ct-item .name {
+  color: #858585;
+}
+
+main .info-block .ct-content .ct-list .ct-item .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .info-block .ct-content .ct-list .ct-item .value span {
+  display: block;
+}
+
+main .info-block .ct-content .ct-list .ct-item .value span.link a {
+  color: #DE3E26;
 }
 
 main .info-block .content {
