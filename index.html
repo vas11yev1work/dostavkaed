@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
+        <div class="container">
             <div class="header">
                 <div class="logo">
                     <a href="#" class="logo-link">
@@ -23,8 +23,26 @@
                     </a>
                 </div>
                 <div class="address-string">
-                    <input type="text" placeholder="Адрес доставки" class="address">
-                    <img src="/img/map.svg" alt="map" class="map">
+                    <div class="search">
+                        <input type="text" placeholder="Адрес доставки" class="address">
+                        <img src="/img/map.svg" alt="map" class="map">
+                    </div>
+                    <div class="time">
+                        <div class="time-select">
+                            <div class="date">
+                                <img src="/img/time.svg" alt="time">
+                                <span>Сегодня</span>
+                            </div>
+                            <div class="arrow-down">
+                                <img src="/img/arrow.svg" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="transition"></div>
+                        <ul class="select-time">
+                            <li>Сегодня</li>
+                            <li>Завтра</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="action-buttons">
                     <button class="white-active-button sign-in">
@@ -34,12 +52,17 @@
                         Корзина
                     </button>
                 </div>
+                <div class="bars">
+                    <button class="menu-button">
+                        <img src="/img/bars.svg" alt="bars">
+                    </button>
+                </div>
             </div>
         </div>
     </header>
     <main>
         <div class="photo-block">
-            <div class="header-container">
+            <div class="container">
                 <div class="content">
                     <h1 class="title">Доставка еды в Санкт-Петербурге</h1>
                     <span>Выбери, закажи, съешь</span>
@@ -96,7 +119,52 @@
                             <span>Еще</span>
                             <img src="/img/arrow.svg" alt="arrow">
                         </button>
+                        <div class="transparent"></div>
+                        <ul class="other-categories">
+                            <li class="o-cat">
+                                Здоровая еда
+                            </li>
+                            <li class="o-cat">
+                                Шаверма
+                            </li>
+                            <li class="o-cat">
+                                Русская кухня 
+                            </li>
+                            <li class="o-cat">
+                                Грузинская кухня
+                            </li>
+                            <li class="o-cat">
+                                Азиатская кухня 
+                            </li>
+                            <li class="o-cat">
+                                Узбекская кухня 
+                            </li>
+                            <li class="o-cat">
+                                Индийская кухня 
+                            </li>
+                            <li class="o-cat">
+                                Итальянская кухня 
+                            </li>
+                            <li class="o-cat">
+                                Обеды 
+                            </li>
+                            <li class="o-cat">
+                                Завтраки 
+                            </li>
+                            <li class="o-cat">
+                                Кофе 
+                            </li>
+                            <li class="o-cat">
+                                Для детей 
+                            </li>
+                        </ul>
                     </div>
+                </div>
+                <div class="mobile-content">
+                    <button class="open-cat-menu">
+                        <span>Выбрать категорию</span>
+                        <img src="/img/arrow.svg" alt="arrow">
+                    </button>
                 </div>
             </div>
         </div>
@@ -116,58 +184,100 @@
                     </div>
                     <ul class="action-list">
                         <li class="action-item">
-                            <a href="#" class="action">
-                                <img src="/img/action.png" alt="action" class="background">
-                                <div class="info-block">
-                                    <div class="label">
-                                        <img src="/img/label.svg" alt="label" class="i-label">
-                                        <h3 class="action-title">Cinnabon</h3>
+                            <a href="#" class="action-link">
+                                <div class="image-block">
+                                    <img src="/img/action.png" alt="action">
+                                </div>
+                                <div class="action-info-block">
+                                    <div class="action-label">
+                                        <img src="/img/label.svg" alt="label">
+                                        <h4 class="action-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, non.</h4>
                                     </div>
-                                    <div class="action-information">
-                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                    </div>
+                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
                                 </div>
                             </a>
                         </li>
                         <li class="action-item">
-                            <a href="#" class="action">
-                                <img src="/img/action.png" alt="action" class="background">
-                                <div class="info-block">
-                                    <div class="label">
-                                        <img src="/img/label.svg" alt="label" class="i-label">
-                                        <h3 class="action-title">Cinnabon</h3>
+                            <a href="#" class="action-link">
+                                <div class="image-block">
+                                    <img src="/img/action.png" alt="action">
+                                </div>
+                                <div class="action-info-block">
+                                    <div class="action-label">
+                                        <img src="/img/label.svg" alt="label">
+                                        <h4 class="action-title">Cinnabon</h4>
                                     </div>
-                                    <div class="action-information">
-                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                    </div>
+                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
                                 </div>
                             </a>
                         </li>
                         <li class="action-item">
-                            <a href="#" class="action">
-                                <img src="/img/action.png" alt="action" class="background">
-                                <div class="info-block">
-                                    <div class="label">
-                                        <img src="/img/label.svg" alt="label" class="i-label">
-                                        <h3 class="action-title">Cinnabon</h3>
+                            <a href="#" class="action-link">
+                                <div class="image-block">
+                                    <img src="/img/action.png" alt="action">
+                                </div>
+                                <div class="action-info-block">
+                                    <div class="action-label">
+                                        <img src="/img/label.svg" alt="label">
+                                        <h4 class="action-title">Cinnabon</h4>
                                     </div>
-                                    <div class="action-information">
-                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                    </div>
+                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
                                 </div>
                             </a>
                         </li>
                         <li class="action-item">
-                            <a href="#" class="action">
-                                <img src="/img/action.png" alt="action" class="background">
-                                <div class="info-block">
-                                    <div class="label">
-                                        <img src="/img/label.svg" alt="label" class="i-label">
-                                        <h3 class="action-title">Cinnabon</h3>
+                            <a href="#" class="action-link">
+                                <div class="image-block">
+                                    <img src="/img/action.png" alt="action">
+                                </div>
+                                <div class="action-info-block">
+                                    <div class="action-label">
+                                        <img src="/img/label.svg" alt="label">
+                                        <h4 class="action-title">Cinnabon</h4>
                                     </div>
-                                    <div class="action-information">
-                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="action-item">
+                            <a href="#" class="action-link">
+                                <div class="image-block">
+                                    <img src="/img/action.png" alt="action">
+                                </div>
+                                <div class="action-info-block">
+                                    <div class="action-label">
+                                        <img src="/img/label.svg" alt="label">
+                                        <h4 class="action-title">Cinnabon</h4>
                                     </div>
+                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="action-item">
+                            <a href="#" class="action-link">
+                                <div class="image-block">
+                                    <img src="/img/action.png" alt="action">
+                                </div>
+                                <div class="action-info-block">
+                                    <div class="action-label">
+                                        <img src="/img/label.svg" alt="label">
+                                        <h4 class="action-title">Cinnabon</h4>
+                                    </div>
+                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="action-item">
+                            <a href="#" class="action-link">
+                                <div class="image-block">
+                                    <img src="/img/action.png" alt="action">
+                                </div>
+                                <div class="action-info-block">
+                                    <div class="action-label">
+                                        <img src="/img/label.svg" alt="label">
+                                        <h4 class="action-title">Cinnabon</h4>
+                                    </div>
+                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
                                 </div>
                             </a>
                         </li>
@@ -222,7 +332,7 @@
                                 </div>
                                 <div class="restaurant-information">
                                     <div class="restaurant-title">
-                                        <h4>Хинкали</h4>
+                                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, itaque.</h4>
                                         <div class="stars">
                                             <img src="/img/star.svg" alt="star">
                                             <span class="count">4,4</span>
@@ -389,7 +499,7 @@
                     <div class="left">
                         <div class="logo">
                             <img src="/img/footer_logo.svg" alt="logo" class="f-logo">
-                            <img src="/img/footer_name.svg" alt="name">
+                            <img src="/img/footer_name.svg" alt="name" class="f-name">
                         </div>
                         <ul class="footer-pages">
                             <li class="page">
@@ -411,7 +521,7 @@
                             <a href="#">
                                 <img src="/img/android.svg" alt="android">
                             </a>
-                            <a href="#">
+                            <a href="#" class="hdn">
                                 <img src="/img/ios.svg" alt="ios">
                             </a>
                         </div>
@@ -439,6 +549,64 @@
                         </ul>
                     </div>
                 </div>
+                <hr class="line">
+                <div class="info-footer">
+                    <div class="copy">
+                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
+                    </div>
+                    <div class="terms-of-use">
+                        <a href="#">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-footer">
+                <div class="logo">
+                    <div class="eda-logo">
+                        <img src="/img/footer_logo.svg" alt="logo" class="fm-logo">
+                        <img src="/img/footer_name.svg" alt="name" class="fm-name">
+                    </div>
+                    <div class="mb-apps">
+                        <img src="/img/android.svg" alt="android">
+                        <img src="/img/ios.svg" alt="ios" class="hdn">
+                    </div>
+                </div>
+                <hr class="line">
+                <ul class="networks">
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/vk.svg" alt="vk">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/ig.svg" alt="ig">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/tg.svg" alt="tg">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/fb.svg" alt="fb">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer-pages">
+                    <li class="page">
+                        <a href="#">Контакты</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Вопросы и ответы</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Стать курьером</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Стать партнером</a>
+                    </li>
+                </ul>
                 <hr class="line">
                 <div class="info-footer">
                     <div class="copy">

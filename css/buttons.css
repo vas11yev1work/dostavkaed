@@ -38,7 +38,7 @@ button {
 .active-other-rest {
   height: 50px;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: transparent;
   color: #DE3E26;
   border: 2px solid #DE3E26;
   border-radius: 4px;
@@ -49,6 +49,24 @@ button {
 }
 
 .active-other-rest:hover {
+  background-color: #DE3E26;
+  color: #FFFFFF;
+}
+
+.active {
+  height: 38px;
+  padding: 0 30px;
+  background-color: transparent;
+  color: #DE3E26;
+  border: 2px solid #DE3E26;
+  border-radius: 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.active:hover {
   background-color: #DE3E26;
   color: #FFFFFF;
 }
@@ -67,5 +85,29 @@ button {
 
 .cat-button:hover {
   background-color: #ECECEC;
+}
+
+.open-cat-menu {
+  height: 38px;
+  color: #4B4B4B;
+  background-color: #ECECEC;
+  border: none;
+  width: 100%;
+  max-width: 200px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+}
+
+.open-cat-menu img {
+  width: 10px;
 }
 /*# sourceMappingURL=buttons.css.map */

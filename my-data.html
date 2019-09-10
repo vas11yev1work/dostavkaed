@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ДоставкаЕД - доставка еды из ресторанов в Санкт-Петербурге</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="#" class="logo-link">
+                        <img src="/img/logo.svg" alt="logo" class="i-logo">
+                        <img src="/img/name.svg" alt="name" class="i-name">
+                    </a>
+                </div>
+                <div class="address-string">
+                    <div class="search">
+                        <input type="text" placeholder="Адрес доставки" class="address">
+                        <img src="/img/map.svg" alt="map" class="map">
+                    </div>
+                    <div class="time">
+                        <div class="time-select">
+                            <div class="date">
+                                <img src="/img/time.svg" alt="time">
+                                <span>Сегодня</span>
+                            </div>
+                            <div class="arrow-down">
+                                <img src="/img/arrow.svg" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="transition"></div>
+                        <ul class="select-time">
+                            <li>Сегодня</li>
+                            <li>Завтра</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="white-active-button sign-in">
+                        Вход
+                    </button>
+                    <button class="white-active-button basket">
+                        Корзина
+                    </button>
+                </div>
+                <div class="bars">
+                    <button class="menu-button">
+                        <img src="/img/bars.svg" alt="bars">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="my-data">
+                <div class="page-title">
+                    <h2>Мои данные</h2>
+                </div>
+                <div class="personal-info info-block">
+                    <div class="info-block-title">
+                        <h3>Личная информация</h3>
+                    </div>
+                    <div class="content">
+                        <div class="personal-info-fields">
+                            <p>
+                                <label>Имя</label>
+                                <input type="text" name="name" id="name" placeholder="Ваше имя">
+                            </p>
+                            <p>
+                                <label>Телефон</label>
+                                <input type="text" name="phone" id="phone" placeholder="Номер телефона">
+                            </p>
+                            <p>
+                                <label>E-mail</label>
+                                <input type="email" name="email" id="email" placeholder="Электронная почта">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="action-button">
+                        <button class="active save">Сохранить</button>
+                    </div>
+                </div>
+                <div class="personal-info info-block">
+                    <div class="info-block-title">
+                        <h3>Личная информация</h3>
+                    </div>
+                    <div class="content">
+                        <div class="my-addresses">
+                            <div class="address">
+                                <input type="text" value="ул. Голодная, д. 1, кв. 92" disabled>
+                                <div class="action-icons">
+                                    <button class="action-icon pen">
+                                        <img src="/img/pen.svg" alt="pen">
+                                    </button>
+                                    <button class="action-icon geo">
+                                        <img src="/img/geo.svg" alt="geo">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="address">
+                                <input type="text" value="ул. Обжорная, д. 25, кв. 47" disabled>
+                                <div class="action-icons">
+                                    <button class="action-icon pen">
+                                        <img src="/img/pen.svg" alt="pen">
+                                    </button>
+                                    <button class="action-icon geo">
+                                        <img src="/img/geo.svg" alt="geo">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-button">
+                        <button class="active save">Добавить адрес</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="main-footer">
+                    <div class="left">
+                        <div class="logo">
+                            <img src="/img/footer_logo.svg" alt="logo" class="f-logo">
+                            <img src="/img/footer_name.svg" alt="name" class="f-name">
+                        </div>
+                        <ul class="footer-pages">
+                            <li class="page">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li class="page">
+                                <a href="#">Вопросы и ответы</a>
+                            </li>
+                            <li class="page">
+                                <a href="#">Стать курьером</a>
+                            </li>
+                            <li class="page">
+                                <a href="#">Стать партнером</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="apps">
+                            <a href="#">
+                                <img src="/img/android.svg" alt="android">
+                            </a>
+                            <a href="#" class="hdn">
+                                <img src="/img/ios.svg" alt="ios">
+                            </a>
+                        </div>
+                        <ul class="networks">
+                            <li class="network">
+                                <a href="#">
+                                    <img src="/img/vk.svg" alt="vk">
+                                </a>
+                            </li>
+                            <li class="network">
+                                <a href="#">
+                                    <img src="/img/ig.svg" alt="ig">
+                                </a>
+                            </li>
+                            <li class="network">
+                                <a href="#">
+                                    <img src="/img/tg.svg" alt="tg">
+                                </a>
+                            </li>
+                            <li class="network">
+                                <a href="#">
+                                    <img src="/img/fb.svg" alt="fb">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="line">
+                <div class="info-footer">
+                    <div class="copy">
+                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
+                    </div>
+                    <div class="terms-of-use">
+                        <a href="#">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-footer">
+                <div class="logo">
+                    <div class="eda-logo">
+                        <img src="/img/footer_logo.svg" alt="logo" class="fm-logo">
+                        <img src="/img/footer_name.svg" alt="name" class="fm-name">
+                    </div>
+                    <div class="mb-apps">
+                        <img src="/img/android.svg" alt="android">
+                        <img src="/img/ios.svg" alt="ios" class="hdn">
+                    </div>
+                </div>
+                <hr class="line">
+                <ul class="networks">
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/vk.svg" alt="vk">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/ig.svg" alt="ig">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/tg.svg" alt="tg">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/fb.svg" alt="fb">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer-pages">
+                    <li class="page">
+                        <a href="#">Контакты</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Вопросы и ответы</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Стать курьером</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Стать партнером</a>
+                    </li>
+                </ul>
+                <hr class="line">
+                <div class="info-footer">
+                    <div class="copy">
+                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
+                    </div>
+                    <div class="terms-of-use">
+                        <a href="#">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

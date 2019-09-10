@@ -2,6 +2,8 @@ $red: #DE3E26;
 $white: #FFFFFF;
 $gray: #AAAAAA;
 $black: #4B4B4B;
+$border: #D2D2D2;
+$hover: #ECECEC;
 
 header{
     height: 80px;
@@ -34,25 +36,201 @@ header{
             }
         }
         .address-string{
-            position: relative;
-            .address{
-                height: 30px;
-                width: 550px;
-                padding: 0 10px 0 27px;
-                border: none;
-                border-radius: 4px;
-                font-size: 14px;
-                color: $black;
+            height: 30px;
+            display: flex;
+            .search{
+                position: relative;
+                .address{
+                    height: 30px;
+                    width: 350px;
+                    padding: 0 10px 0 27px;
+                    border: none;
+                    border-radius: 4px 0 0 4px;
+                    font-size: 14px;
+                    color: $black;
+                    border-right: 1px solid $border;
+                }
+                .map{
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                }
             }
-            .map{
-                position: absolute;
-                top: 50%;
-                left: 10px;
-                transform: translateY(-50%);
+            .time{
+                width: 150px;
+                &:hover{
+                    .transition,
+                    .select-time{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .time-select{
+                    height: 30px;
+                    border-radius: 0 4px 4px 0;
+                    background-color: $white;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $black;
+                    padding: 0 10px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    .date{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            margin-right: 5px;
+                        }
+                    }
+                    .arrow-down{
+                        img{
+                            width: 10px;
+                            transform: translateY(-2px);
+                        }
+                    }
+                }
+                .transition{
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 10px;
+                    width: 100%;
+                }
+                .select-time{
+                    transition: 0.2s;
+                    visibility: hidden;
+                    opacity: 0;
+                    color: $black;
+                    width: 100%;
+                    background-color: $white;
+                    border-radius: 4px;
+                    box-shadow: 0 0 10px rgba(0,0,0,.16);
+                    li{
+                        cursor: pointer;
+                        &:first-child{
+                            border-radius: 4px 4px 0 0;
+                        }
+                        &:last-child{
+                            border-radius: 0 0 4px 4px;
+                        }
+                        &:hover{
+                            background-color: $hover;
+                        }
+                        height: 36px;
+                        padding: 0 10px;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
             }
         }
         .action-buttons{
             display: flex;
+        }
+        .bars{
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 1200px){
+    header{
+        .header{
+            .logo{
+                .logo-link{
+                    .i-name{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 992px){
+    header{
+        .header{
+            .address-string{
+                .search{
+                    .address{
+                        width: 320px;
+                    }
+                }
+                .time{
+                    width: 38px;
+                    .time-select{
+                        .date{
+                            span{
+                                display: none;
+                            }
+                        }
+                        .arrow-down{
+                            display: none;
+                        }
+                    }
+                    .transition,
+                    .select-time{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    header{
+        .header{
+            .logo{
+                .logo-link{
+                    img.i-logo{
+                        height: 30px;
+                        width: 37px;
+                    }
+                }
+            }
+            .address-string{
+                max-width: 500px;
+                width: 100%;
+                margin-right: 20px;
+                .search{
+                    width: 100%;
+                    .address{
+                        width: 100%;
+                    }
+                }
+                .time{
+                    width: 38px;
+                    .time-select{
+                        .date{
+                            span{
+                                display: none;
+                            }
+                        }
+                        .arrow-down{
+                            display: none;
+                        }
+                    }
+                    .transition,
+                    .select-time{
+                        display: none;
+                    }
+                }
+            }
+            .action-buttons{
+                display: none;
+            }
+            .bars{
+                display: block;
+                button.menu-button{
+                    background-color: transparent;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
         }
     }
 }

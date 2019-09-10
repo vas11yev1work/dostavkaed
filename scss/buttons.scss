@@ -41,13 +41,29 @@ button{
 .active-other-rest{
     height: 50px;
     width: 100%;
-    background-color: $white;
+    background-color: transparent;
     color: $red;
     border: 2px solid $red;
     border-radius: 4px;
     transition: 0.2s;
     font-weight: 700;
     font-size: 16px;
+    &:hover{
+        background-color: $red;
+        color: $white;
+    }
+}
+
+.active{
+    height: 38px;
+    padding: 0 30px;
+    background-color: transparent;
+    color: $red;
+    border: 2px solid $red;
+    border-radius: 4px;
+    transition: 0.2s;
+    font-weight: 700;
+    font-size: 14px;
     &:hover{
         background-color: $red;
         color: $white;
@@ -65,5 +81,22 @@ button{
     border-radius: 4px;
     &:hover{
         background-color: $hover;
+    }
+}
+
+.open-cat-menu{
+    height: 38px;
+    color: $black;
+    background-color: $hover;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    img{
+        width: 10px;
     }
 }

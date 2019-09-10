@@ -73,4 +73,101 @@ footer{
             }
         }
     }
+    .mobile-footer{
+        display: none;
+    }
+}
+
+@media (max-width: 575px){
+    footer{
+        .footer{
+            display: none;
+        }
+        .mobile-footer{
+            display: block;
+            .logo{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 12px;
+                .eda-logo{
+                    display: flex;
+                    align-items: center;
+                    .fm-logo{
+                        height: 30px;
+                        margin-right: 10px;
+                    }
+                    .fm-name{
+                        height: 15px;
+                    }
+                }
+                .mb-apps{
+                    img{
+                        height: 30px;
+                    }
+                    .hdn{
+                        display: none;
+                    }
+                }
+            }
+            .networks{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                .network{
+                    margin-right: 12px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    img{
+                        height: 30px;
+                    }
+                }
+            }
+            .footer-pages{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 20px;
+                .page{
+                    height: 30px;
+                    width: 100%;
+                    margin-bottom: 5px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    a{
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $main;
+                    }
+                }
+            }
+            .info-footer{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+                // margin-bottom: 20px;
+                color: $main;
+                font-size: 14px;
+                a{
+                    color: $main;
+                    height: 40px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .terms-of-use{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
