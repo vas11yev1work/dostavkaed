@@ -1098,11 +1098,6 @@ main{
                                     transition: 0.2s;
                                     width: 12px;
                                 }
-                                &.open{
-                                    img{
-                                        transform: rotate(-180deg);
-                                    }
-                                }
                             }
                         }
                         .qn-text{
@@ -1110,6 +1105,15 @@ main{
                             color: $grey;
                             margin-left: 20px;
                             font-size: 14px;
+                            display: none;
+                        }
+                        &.open{
+                            img{
+                                transform: rotate(-180deg);
+                            }
+                            .qn-text{
+                                display: block;
+                            }
                         }
                     }
                 }

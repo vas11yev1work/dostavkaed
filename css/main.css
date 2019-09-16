@@ -1574,16 +1574,21 @@ main .info-block .qn-content .question-list .qn-list .qn-item .qn-title .arrow-d
   width: 12px;
 }
 
-main .info-block .qn-content .question-list .qn-list .qn-item .qn-title .arrow-down.open img {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
 main .info-block .qn-content .question-list .qn-list .qn-item .qn-text {
   text-align: justify;
   color: #858585;
   margin-left: 20px;
   font-size: 14px;
+  display: none;
+}
+
+main .info-block .qn-content .question-list .qn-list .qn-item.open img {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+main .info-block .qn-content .question-list .qn-list .qn-item.open .qn-text {
+  display: block;
 }
 
 main .info-block .del-btn button {

@@ -12,266 +12,310 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/modals.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header">
-                <div class="logo">
-                    <a href="#" class="logo-link">
-                        <img src="/img/logo.svg" alt="logo" class="i-logo">
-                        <img src="/img/name.svg" alt="name" class="i-name">
-                    </a>
-                </div>
-                <div class="address-string">
-                    <div class="search">
-                        <input type="text" placeholder="Адрес доставки" class="address">
-                        <img src="/img/map.svg" alt="map" class="map">
+    <div id="body">
+        <header>
+            <div class="container">
+                <div class="header">
+                    <div class="logo">
+                        <a href="#" class="logo-link">
+                            <img src="/img/logo.svg" alt="logo" class="i-logo">
+                            <img src="/img/name.svg" alt="name" class="i-name">
+                        </a>
                     </div>
-                    <div class="time">
-                        <div class="time-select">
-                            <div class="date">
-                                <img src="/img/time.svg" alt="time">
-                                <span>Сегодня</span>
-                            </div>
-                            <div class="arrow-down">
-                                <img src="/img/arrow.svg" alt="arrow">
-                            </div>
+                    <div class="address-string">
+                        <div class="search">
+                            <input type="text" placeholder="Адрес доставки" class="address">
+                            <img src="/img/map.svg" alt="map" class="map">
                         </div>
-                        <div class="transition"></div>
-                        <ul class="select-time">
-                            <li>Сегодня</li>
-                            <li>Завтра</li>
-                        </ul>
+                        <div class="time">
+                            <div class="time-select">
+                                <div class="date">
+                                    <img src="/img/time.svg" alt="time">
+                                    <span>Сегодня</span>
+                                </div>
+                                <div class="arrow-down">
+                                    <img src="/img/arrow.svg" alt="arrow">
+                                </div>
+                            </div>
+                            <div class="transition"></div>
+                            <ul class="select-time">
+                                <li>Сегодня</li>
+                                <li>Завтра</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="action-buttons">
-                    <button class="white-active-button sign-in">
-                        Вход
-                    </button>
-                    <button class="white-active-button basket">
-                        Корзина
-                    </button>
-                </div>
-                <div class="bars">
-                    <button class="menu-button">
-                        <img src="/img/bars.svg" alt="bars">
-                    </button>
+                    <div class="action-buttons">
+                        <button class="white-active-button sign-in">
+                            Вход
+                        </button>
+                        <button class="white-active-button basket">
+                            Корзина
+                        </button>
+                    </div>
+                    <div class="bars">
+                        <button class="menu-button">
+                            <img src="/img/bars.svg" alt="bars">
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="my-data">
-                <div class="page-title">
-                    <h2>Вопросы и ответы</h2>
-                </div>
-                <div class="info-block">
-                    <div class="ct-block-title">
-                        <h3>Служба поддержки клиентов</h3>
+        </header>
+        <main>
+            <div class="container">
+                <div class="my-data">
+                    <div class="page-title">
+                        <h2>Вопросы и ответы</h2>
                     </div>
-                    <div class="qn-content">
-                        <div class="question-list">
-                            <ul class="qn-list">
-                                <li class="qn-item">
-                                    <div class="qn-title">
-                                        <h4>Что такое ДоставкаЕД</h4>
-                                        <div class="arrow-down open">
-                                            <img src="/img/arrow.svg" alt="arrow">
+                    <div class="info-block">
+                        <div class="ct-block-title">
+                            <h3>Служба поддержки клиентов</h3>
+                        </div>
+                        <div class="qn-content">
+                            <div class="question-list">
+                                <ul class="qn-list">
+                                    <li class="qn-item" @click="client = 1" :class="{'open': client == 1}">
+                                        <div class="qn-title">
+                                            <h4>Что такое ДоставкаЕД</h4>
+                                            <div class="arrow-down">
+                                                <img src="/img/arrow.svg" alt="arrow">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <p class="qn-text">
-                                        Учеба давалась Пушкину тяжело, а преподаватели отмечали, что он не 
-                                        прилежен. Однако вскоре мальчик увлекся чтением. «Проводил бессонные 
-                                        ночи и тайком в кабинете отца пожирал книги одну за другой», — вспоминал 
-                                        позже его младший брат Лев.
-                                    </p>
+                                        <p class="qn-text">
+                                            Учеба давалась Пушкину тяжело, а преподаватели отмечали, что он не 
+                                            прилежен. Однако вскоре мальчик увлекся чтением. «Проводил бессонные 
+                                            ночи и тайком в кабинете отца пожирал книги одну за другой», — вспоминал 
+                                            позже его младший брат Лев.
+                                        </p>
+                                    </li>
+                                    <li class="qn-item" @click="client = 2" :class="{'open': client == 2}">
+                                        <div class="qn-title">
+                                            <h4>Личный кабинет</h4>
+                                            <div class="arrow-down">
+                                                <img src="/img/arrow.svg" alt="arrow">
+                                            </div>
+                                        </div>
+                                        <p class="qn-text">
+                                            Учеба давалась Пушкину тяжело, а преподаватели отмечали, что он не 
+                                            прилежен. Однако вскоре мальчик увлекся чтением. «Проводил бессонные 
+                                            ночи и тайком в кабинете отца пожирал книги одну за другой», — вспоминал 
+                                            позже его младший брат Лев.
+                                        </p>
+                                    </li>
+                                    <li class="qn-item" @click="client = 3" :class="{'open': client == 3}">
+                                        <div class="qn-title">
+                                            <h4>Условия доставки</h4>
+                                            <div class="arrow-down">
+                                                <img src="/img/arrow.svg" alt="arrow">
+                                            </div>
+                                        </div>
+                                        <p class="qn-text">
+                                            Учеба давалась Пушкину тяжело, а преподаватели отмечали, что он не 
+                                            прилежен. Однако вскоре мальчик увлекся чтением. «Проводил бессонные 
+                                            ночи и тайком в кабинете отца пожирал книги одну за другой», — вспоминал 
+                                            позже его младший брат Лев.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="ct-block-title">
+                            <h3>Оформление заказа</h3>
+                        </div>
+                        <div class="qn-content">
+                            <div class="question-list">
+                                <ul class="qn-list">
+                                    <li class="qn-item" @click="order = 1" :class="{'open': order == 1}">
+                                        <div class="qn-title">
+                                            <h4>Что такое ДоставкаЕД</h4>
+                                            <div class="arrow-down">
+                                                <img src="/img/arrow.svg" alt="arrow">
+                                            </div>
+                                        </div>
+                                        <p class="qn-text">
+                                            Учеба давалась Пушкину тяжело, а преподаватели отмечали, что он не 
+                                            прилежен. Однако вскоре мальчик увлекся чтением. «Проводил бессонные 
+                                            ночи и тайком в кабинете отца пожирал книги одну за другой», — вспоминал 
+                                            позже его младший брат Лев.
+                                        </p>
+                                    </li>
+                                    <li class="qn-item" @click="order = 2" :class="{'open': order == 2}">
+                                        <div class="qn-title">
+                                            <h4>Личный кабинет</h4>
+                                            <div class="arrow-down">
+                                                <img src="/img/arrow.svg" alt="arrow">
+                                            </div>
+                                        </div>
+                                        <p class="qn-text">
+                                            Учеба давалась Пушкину тяжело, а преподаватели отмечали, что он не 
+                                            прилежен. Однако вскоре мальчик увлекся чтением. «Проводил бессонные 
+                                            ночи и тайком в кабинете отца пожирал книги одну за другой», — вспоминал 
+                                            позже его младший брат Лев.
+                                        </p>
+                                    </li>
+                                    <li class="qn-item" @click="order = 3" :class="{'open': order == 3}">
+                                        <div class="qn-title">
+                                            <h4>Условия доставки</h4>
+                                            <div class="arrow-down">
+                                                <img src="/img/arrow.svg" alt="arrow">
+                                            </div>
+                                        </div>
+                                        <p class="qn-text">
+                                            Учеба давалась Пушкину тяжело, а преподаватели отмечали, что он не 
+                                            прилежен. Однако вскоре мальчик увлекся чтением. «Проводил бессонные 
+                                            ночи и тайком в кабинете отца пожирал книги одну за другой», — вспоминал 
+                                            позже его младший брат Лев.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="main-footer">
+                        <div class="left">
+                            <div class="logo">
+                                <img src="/img/footer_logo.svg" alt="logo" class="f-logo">
+                                <img src="/img/footer_name.svg" alt="name" class="f-name">
+                            </div>
+                            <ul class="footer-pages">
+                                <li class="page">
+                                    <a href="#">Контакты</a>
                                 </li>
-                                <li class="qn-item">
-                                    <div class="qn-title">
-                                        <h4>Личный кабинет</h4>
-                                        <div class="arrow-down">
-                                            <img src="/img/arrow.svg" alt="arrow">
-                                        </div>
-                                    </div>
+                                <li class="page">
+                                    <a href="#">Вопросы и ответы</a>
                                 </li>
-                                <li class="qn-item">
-                                    <div class="qn-title">
-                                        <h4>Условия доставки</h4>
-                                        <div class="arrow-down">
-                                            <img src="/img/arrow.svg" alt="arrow">
-                                        </div>
-                                    </div>
+                                <li class="page">
+                                    <a href="#">Стать курьером</a>
+                                </li>
+                                <li class="page">
+                                    <a href="#">Стать партнером</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <div class="apps">
+                                <a href="#">
+                                    <img src="/img/android.svg" alt="android">
+                                </a>
+                                <a href="#" class="hdn">
+                                    <img src="/img/ios.svg" alt="ios">
+                                </a>
+                            </div>
+                            <ul class="networks">
+                                <li class="network">
+                                    <a href="#">
+                                        <img src="/img/vk.svg" alt="vk">
+                                    </a>
+                                </li>
+                                <li class="network">
+                                    <a href="#">
+                                        <img src="/img/ig.svg" alt="ig">
+                                    </a>
+                                </li>
+                                <li class="network">
+                                    <a href="#">
+                                        <img src="/img/tg.svg" alt="tg">
+                                    </a>
+                                </li>
+                                <li class="network">
+                                    <a href="#">
+                                        <img src="/img/fb.svg" alt="fb">
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="info-block">
-                    <div class="ct-block-title">
-                        <h3>Оформление заказа</h3>
-                    </div>
-                    <div class="qn-content">
-                        <div class="question-list">
-                            <ul class="qn-list">
-                                <li class="qn-item">
-                                    <div class="qn-title">
-                                        <h4>Что такое ДоставкаЕД</h4>
-                                        <div class="arrow-down">
-                                            <img src="/img/arrow.svg" alt="arrow">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="qn-item">
-                                    <div class="qn-title">
-                                        <h4>Личный кабинет</h4>
-                                        <div class="arrow-down">
-                                            <img src="/img/arrow.svg" alt="arrow">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="qn-item">
-                                    <div class="qn-title">
-                                        <h4>Условия доставки</h4>
-                                        <div class="arrow-down">
-                                            <img src="/img/arrow.svg" alt="arrow">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                    <hr class="line">
+                    <div class="info-footer">
+                        <div class="copy">
+                            <span>&copy; 2019 ООО «ДоставкаЕД»</span>
+                        </div>
+                        <div class="terms-of-use">
+                            <a href="#">Пользовательское соглашение</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="footer">
-                <div class="main-footer">
-                    <div class="left">
-                        <div class="logo">
-                            <img src="/img/footer_logo.svg" alt="logo" class="f-logo">
-                            <img src="/img/footer_name.svg" alt="name" class="f-name">
+                <div class="mobile-footer">
+                    <div class="logo">
+                        <div class="eda-logo">
+                            <img src="/img/footer_logo.svg" alt="logo" class="fm-logo">
+                            <img src="/img/footer_name.svg" alt="name" class="fm-name">
                         </div>
-                        <ul class="footer-pages">
-                            <li class="page">
-                                <a href="#">Контакты</a>
-                            </li>
-                            <li class="page">
-                                <a href="#">Вопросы и ответы</a>
-                            </li>
-                            <li class="page">
-                                <a href="#">Стать курьером</a>
-                            </li>
-                            <li class="page">
-                                <a href="#">Стать партнером</a>
-                            </li>
-                        </ul>
+                        <div class="mb-apps">
+                            <img src="/img/android.svg" alt="android">
+                            <img src="/img/ios.svg" alt="ios" class="hdn">
+                        </div>
                     </div>
-                    <div class="right">
-                        <div class="apps">
+                    <hr class="line">
+                    <ul class="networks">
+                        <li class="network">
                             <a href="#">
-                                <img src="/img/android.svg" alt="android">
+                                <img src="/img/vk.svg" alt="vk">
                             </a>
-                            <a href="#" class="hdn">
-                                <img src="/img/ios.svg" alt="ios">
+                        </li>
+                        <li class="network">
+                            <a href="#">
+                                <img src="/img/ig.svg" alt="ig">
                             </a>
+                        </li>
+                        <li class="network">
+                            <a href="#">
+                                <img src="/img/tg.svg" alt="tg">
+                            </a>
+                        </li>
+                        <li class="network">
+                            <a href="#">
+                                <img src="/img/fb.svg" alt="fb">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-pages">
+                        <li class="page">
+                            <a href="#">Контакты</a>
+                        </li>
+                        <li class="page">
+                            <a href="#">Вопросы и ответы</a>
+                        </li>
+                        <li class="page">
+                            <a href="#">Стать курьером</a>
+                        </li>
+                        <li class="page">
+                            <a href="#">Стать партнером</a>
+                        </li>
+                    </ul>
+                    <hr class="line">
+                    <div class="info-footer">
+                        <div class="copy">
+                            <span>&copy; 2019 ООО «ДоставкаЕД»</span>
                         </div>
-                        <ul class="networks">
-                            <li class="network">
-                                <a href="#">
-                                    <img src="/img/vk.svg" alt="vk">
-                                </a>
-                            </li>
-                            <li class="network">
-                                <a href="#">
-                                    <img src="/img/ig.svg" alt="ig">
-                                </a>
-                            </li>
-                            <li class="network">
-                                <a href="#">
-                                    <img src="/img/tg.svg" alt="tg">
-                                </a>
-                            </li>
-                            <li class="network">
-                                <a href="#">
-                                    <img src="/img/fb.svg" alt="fb">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <hr class="line">
-                <div class="info-footer">
-                    <div class="copy">
-                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
-                    </div>
-                    <div class="terms-of-use">
-                        <a href="#">Пользовательское соглашение</a>
+                        <div class="terms-of-use">
+                            <a href="#">Пользовательское соглашение</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="mobile-footer">
-                <div class="logo">
-                    <div class="eda-logo">
-                        <img src="/img/footer_logo.svg" alt="logo" class="fm-logo">
-                        <img src="/img/footer_name.svg" alt="name" class="fm-name">
-                    </div>
-                    <div class="mb-apps">
-                        <img src="/img/android.svg" alt="android">
-                        <img src="/img/ios.svg" alt="ios" class="hdn">
-                    </div>
-                </div>
-                <hr class="line">
-                <ul class="networks">
-                    <li class="network">
-                        <a href="#">
-                            <img src="/img/vk.svg" alt="vk">
-                        </a>
-                    </li>
-                    <li class="network">
-                        <a href="#">
-                            <img src="/img/ig.svg" alt="ig">
-                        </a>
-                    </li>
-                    <li class="network">
-                        <a href="#">
-                            <img src="/img/tg.svg" alt="tg">
-                        </a>
-                    </li>
-                    <li class="network">
-                        <a href="#">
-                            <img src="/img/fb.svg" alt="fb">
-                        </a>
-                    </li>
-                </ul>
-                <ul class="footer-pages">
-                    <li class="page">
-                        <a href="#">Контакты</a>
-                    </li>
-                    <li class="page">
-                        <a href="#">Вопросы и ответы</a>
-                    </li>
-                    <li class="page">
-                        <a href="#">Стать курьером</a>
-                    </li>
-                    <li class="page">
-                        <a href="#">Стать партнером</a>
-                    </li>
-                </ul>
-                <hr class="line">
-                <div class="info-footer">
-                    <div class="copy">
-                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
-                    </div>
-                    <div class="terms-of-use">
-                        <a href="#">Пользовательское соглашение</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <script>
+        new Vue({
+            el: '#body',
+            data(){
+                return {
+                    client: null,
+                    order: null
+                }
+            }
+        })
+    </script>
 </body>
 </html>
