@@ -11,613 +11,824 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/modals.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header">
-                <div class="logo">
-                    <a href="#" class="logo-link">
-                        <img src="/img/logo.svg" alt="logo" class="i-logo">
-                        <img src="/img/name.svg" alt="name" class="i-name">
-                    </a>
-                </div>
-                <div class="address-string">
-                    <div class="search">
-                        <input type="text" placeholder="Адрес доставки" class="address">
-                        <img src="/img/map.svg" alt="map" class="map">
+    <div id="body">
+        <header>
+            <div class="container">
+                <div class="header">
+                    <div class="logo">
+                        <a href="#" class="logo-link">
+                            <img src="/img/logo.svg" alt="logo" class="i-logo">
+                            <img src="/img/name.svg" alt="name" class="i-name">
+                        </a>
                     </div>
-                    <div class="time">
-                        <div class="time-select">
-                            <div class="date">
-                                <img src="/img/time.svg" alt="time">
-                                <span>Сегодня</span>
-                            </div>
-                            <div class="arrow-down">
-                                <img src="/img/arrow.svg" alt="arrow">
-                            </div>
+                    <div class="address-string">
+                        <div class="search">
+                            <input type="text" placeholder="Адрес доставки" class="address">
+                            <img src="/img/map.svg" alt="map" class="map">
                         </div>
-                        <div class="transition"></div>
-                        <ul class="select-time">
-                            <li>Сегодня</li>
-                            <li>Завтра</li>
-                        </ul>
+                        <div class="time">
+                            <div class="time-select">
+                                <div class="date">
+                                    <img src="/img/time.svg" alt="time">
+                                    <span>Сегодня</span>
+                                </div>
+                                <div class="arrow-down">
+                                    <img src="/img/arrow.svg" alt="arrow">
+                                </div>
+                            </div>
+                            <div class="transition"></div>
+                            <ul class="select-time">
+                                <li>Сейчас</li>
+                                <li @click="time = !time">Ко времени</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="white-active-button sign-in" @click="signIn = !signIn">
+                            Вход
+                        </button>
+                        <button class="white-active-button basket" @click="basket = !basket">
+                            Корзина
+                        </button>
+                    </div>
+                    <div class="bars">
+                        <button class="menu-button" @click="mobile = !mobile">
+                            <img src="/img/bars.svg" alt="bars">
+                        </button>
                     </div>
                 </div>
-                <div class="action-buttons">
-                    <button class="white-active-button sign-in">
-                        Вход
-                    </button>
-                    <button class="white-active-button basket">
-                        Корзина
-                    </button>
+            </div>
+        </header>
+        <div class="mobile-header" :class="{'open': mobile}">
+            <div class="header-block">
+                <div class="close">
+                    <button @click="mobile = !mobile">« Скрыть</button>
                 </div>
-                <div class="bars">
-                    <button class="menu-button">
-                        <img src="/img/bars.svg" alt="bars">
+                <div class="logo">
+                    <img src="/img/logo-black.svg" alt="logo" class="logo-i">
+                    <img src="/img/name-black.svg" alt="name">
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/img/rest.svg" alt="rest">
+                            <h4>Рестораны</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/img/data.svg" alt="data">
+                            <h4>Мои данные</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/img/orders.svg" alt="orders">
+                            <h4>Мои заказ</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/img/sign-out.svg" alt="sign-out">
+                            <h4>Выйти</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="modals" id="modals">
+            <div class="modal" :class="{ 'hide': !signIn }">
+                <div class="modal-window modal-sign-in">
+                    <button class="close-button" @click="signIn = !signIn">
+                        <img src="/img/close.svg" alt="close">
                     </button>
+                    <div class="title">
+                        <h3>Чтобы войти, пожалуйста, укажите Ваш номер телефона</h3>
+                    </div>
+                    <div class="content">
+                        <div class="phone field">
+                            <input type="text" placeholder="Номер мобильного телефона">
+                            <button class="not-active code-button">Получить код</button>
+                        </div>
+                        <div class="code field">
+                            <input type="text" placeholder="Номер мобильного телефона">
+                            <button class="active code-button">Далее</button>
+                        </div>
+                        <div class="info">
+                            <p>
+                                Указывая номер телефона, вы принимаете условия <a href="#">пользовательского соглашения</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" :class="{'hide': !time}">
+                <div class="modal-window time">
+                    <button class="close-button" @click="time = !time">
+                            <img src="/img/close.svg" alt="close">
+                    </button>
+                    <div class="title">
+                        <h3>Время доставки</h3>
+                    </div>
+                    <div class="content">
+                        <div class="time">
+                            <div class="select-day">
+                                <div class="today tm">
+                                    <input type="radio" name="tm" id="today" value="today" checked>
+                                    <label for="today">Сегодня</label>
+                                </div>
+                                <div class="today tm">
+                                    <input type="radio" name="tm" id="tomorrow" value="tomorrow">
+                                    <label for="tomorrow">Завтра</label>
+                                </div>
+                            </div>
+                            <ul class="select-time">
+                                <li class="selected s-active">18:00</li>
+                                <li class="selected">19:00</li>
+                                <li class="selected">20:00</li>
+                                <li class="selected">21:00</li>
+                                <li class="selected">22:00</li>
+                            </ul>
+                            <button class="not-active">Применить</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-    <main>
-        <div class="photo-block">
-            <div class="container">
-                <div class="content">
-                    <h1 class="title">Доставка еды в Санкт-Петербурге</h1>
-                    <span>Выбери, закажи, съешь</span>
+        <main>
+            <div class="photo-block">
+                <div class="container">
+                    <div class="content">
+                        <h1 class="title">Доставка еды в Санкт-Петербурге</h1>
+                        <span>Выбери, закажи, съешь</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="categories-block">
-            <div class="container">
-                <div class="content">
-                    <ul class="categories">
-                        <li class="category-item">
-                            <button class="cat-button">
-                                Суши
+            <div class="categories-block">
+                <div class="container">
+                    <div class="content">
+                        <ul class="categories">
+                            <li class="category-item">
+                                <button class="cat-button">
+                                    Суши
+                                </button>
+                            </li>
+                            <li class="category-item">
+                                <button class="cat-button">
+                                    Бургеры
+                                </button>
+                            </li>
+                            <li class="category-item">
+                                <button class="cat-button">
+                                    Пицца
+                                </button>
+                            </li>
+                            <li class="category-item">
+                                <button class="cat-button">
+                                    Фастфуд
+                                </button>
+                            </li>
+                            <li class="category-item">
+                                <button class="cat-button">
+                                    Пироги
+                                </button>
+                            </li>
+                            <li class="category-item">
+                                <button class="cat-button">
+                                    Шашлык
+                                </button>
+                            </li>
+                            <li class="category-item">
+                                <button class="cat-button">
+                                    Десерты
+                                </button>
+                            </li>
+                            <li class="category-item">
+                                <button class="cat-button">
+                                    Вегги
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="other">
+                            <button class="cat-button other-button">
+                                <span>Еще</span>
+                                <img src="/img/arrow.svg" alt="arrow">
                             </button>
-                        </li>
-                        <li class="category-item">
-                            <button class="cat-button">
-                                Бургеры
-                            </button>
-                        </li>
-                        <li class="category-item">
-                            <button class="cat-button">
-                                Пицца
-                            </button>
-                        </li>
-                        <li class="category-item">
-                            <button class="cat-button">
-                                Фастфуд
-                            </button>
-                        </li>
-                        <li class="category-item">
-                            <button class="cat-button">
-                                Пироги
-                            </button>
-                        </li>
-                        <li class="category-item">
-                            <button class="cat-button">
-                                Шашлык
-                            </button>
-                        </li>
-                        <li class="category-item">
-                            <button class="cat-button">
-                                Десерты
-                            </button>
-                        </li>
-                        <li class="category-item">
-                            <button class="cat-button">
-                                Вегги
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="other">
-                        <button class="cat-button other-button">
-                            <span>Еще</span>
+                            <div class="transparent"></div>
+                            <ul class="other-categories">
+                                <li class="o-cat">
+                                    Здоровая еда
+                                </li>
+                                <li class="o-cat">
+                                    Шаверма
+                                </li>
+                                <li class="o-cat">
+                                    Русская кухня 
+                                </li>
+                                <li class="o-cat">
+                                    Грузинская кухня
+                                </li>
+                                <li class="o-cat">
+                                    Азиатская кухня 
+                                </li>
+                                <li class="o-cat">
+                                    Узбекская кухня 
+                                </li>
+                                <li class="o-cat">
+                                    Индийская кухня 
+                                </li>
+                                <li class="o-cat">
+                                    Итальянская кухня 
+                                </li>
+                                <li class="o-cat">
+                                    Обеды 
+                                </li>
+                                <li class="o-cat">
+                                    Завтраки 
+                                </li>
+                                <li class="o-cat">
+                                    Кофе 
+                                </li>
+                                <li class="o-cat">
+                                    Для детей 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-content">
+                        <button class="open-cat-menu">
+                            <span>Выбрать категорию</span>
                             <img src="/img/arrow.svg" alt="arrow">
                         </button>
-                        <div class="transparent"></div>
-                        <ul class="other-categories">
-                            <li class="o-cat">
-                                Здоровая еда
+                    </div>
+                </div>
+            </div>
+            <div class="search-block">
+                <div class="container">
+                    <div class="content">
+                        <input type="text" class="search" placeholder="Поиск блюд и ресторанов">
+                        <img src="/img/search.svg" alt="search">
+                    </div>
+                </div>
+            </div>
+            <div class="action-block">
+                <div class="container">
+                    <div class="content">
+                        <div class="block-title">
+                            <h2 class="default-title">Акции и скидки</h2>
+                        </div>
+                        <ul class="action-list">
+                            <li class="action-item">
+                                <a href="#" class="action-link">
+                                    <div class="image-block">
+                                        <img src="/img/action.png" alt="action">
+                                    </div>
+                                    <div class="action-info-block">
+                                        <div class="action-label">
+                                            <img src="/img/label.svg" alt="label">
+                                            <h4 class="action-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, non.</h4>
+                                        </div>
+                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="o-cat">
-                                Шаверма
+                            <li class="action-item">
+                                <a href="#" class="action-link">
+                                    <div class="image-block">
+                                        <img src="/img/action.png" alt="action">
+                                    </div>
+                                    <div class="action-info-block">
+                                        <div class="action-label">
+                                            <img src="/img/label.svg" alt="label">
+                                            <h4 class="action-title">Cinnabon</h4>
+                                        </div>
+                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="o-cat">
-                                Русская кухня 
+                            <li class="action-item">
+                                <a href="#" class="action-link">
+                                    <div class="image-block">
+                                        <img src="/img/action.png" alt="action">
+                                    </div>
+                                    <div class="action-info-block">
+                                        <div class="action-label">
+                                            <img src="/img/label.svg" alt="label">
+                                            <h4 class="action-title">Cinnabon</h4>
+                                        </div>
+                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="o-cat">
-                                Грузинская кухня
+                            <li class="action-item">
+                                <a href="#" class="action-link">
+                                    <div class="image-block">
+                                        <img src="/img/action.png" alt="action">
+                                    </div>
+                                    <div class="action-info-block">
+                                        <div class="action-label">
+                                            <img src="/img/label.svg" alt="label">
+                                            <h4 class="action-title">Cinnabon</h4>
+                                        </div>
+                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="o-cat">
-                                Азиатская кухня 
+                            <li class="action-item">
+                                <a href="#" class="action-link">
+                                    <div class="image-block">
+                                        <img src="/img/action.png" alt="action">
+                                    </div>
+                                    <div class="action-info-block">
+                                        <div class="action-label">
+                                            <img src="/img/label.svg" alt="label">
+                                            <h4 class="action-title">Cinnabon</h4>
+                                        </div>
+                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="o-cat">
-                                Узбекская кухня 
+                            <li class="action-item">
+                                <a href="#" class="action-link">
+                                    <div class="image-block">
+                                        <img src="/img/action.png" alt="action">
+                                    </div>
+                                    <div class="action-info-block">
+                                        <div class="action-label">
+                                            <img src="/img/label.svg" alt="label">
+                                            <h4 class="action-title">Cinnabon</h4>
+                                        </div>
+                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="o-cat">
-                                Индийская кухня 
-                            </li>
-                            <li class="o-cat">
-                                Итальянская кухня 
-                            </li>
-                            <li class="o-cat">
-                                Обеды 
-                            </li>
-                            <li class="o-cat">
-                                Завтраки 
-                            </li>
-                            <li class="o-cat">
-                                Кофе 
-                            </li>
-                            <li class="o-cat">
-                                Для детей 
+                            <li class="action-item">
+                                <a href="#" class="action-link">
+                                    <div class="image-block">
+                                        <img src="/img/action.png" alt="action">
+                                    </div>
+                                    <div class="action-info-block">
+                                        <div class="action-label">
+                                            <img src="/img/label.svg" alt="label">
+                                            <h4 class="action-title">Cinnabon</h4>
+                                        </div>
+                                        <p>При заказе от 1500 ₽ - в подарок мороженое</p>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="mobile-content">
-                    <button class="open-cat-menu">
-                        <span>Выбрать категорию</span>
-                        <img src="/img/arrow.svg" alt="arrow">
+            </div>
+            <div class="restaurant-block">
+                <div class="container">
+                    <div class="content">
+                        <div class="block-title">
+                            <h2 class="default-title">Рестораны</h2>
+                        </div>
+                        <ul class="restaurant-list">
+                            <li class="restaurant">
+                                <a href="#" class="restaurant-item">
+                                    <div class="restaurant-image">
+                                        <img src="/img/rest.png" alt="rest" class="rest">
+                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                    </div>
+                                    <div class="restaurant-information">
+                                        <div class="restaurant-title">
+                                            <h4>Хинкали</h4>
+                                            <div class="stars">
+                                                <img src="/img/star.svg" alt="star">
+                                                <span class="count">4,4</span>
+                                            </div>
+                                        </div>
+                                        <div class="restaurant-text-labels">
+                                            <ul class="text-labels">
+                                                <li class="text-label">Грузинская кухня</li>
+                                            </ul>
+                                        </div>
+                                        <div class="delivery-info">
+                                            <div class="time delivery">
+                                                <img src="/img/our_courier.svg" alt="our">
+                                                <span>30-40 мин</span>
+                                            </div>
+                                            <div class="cost delivery">
+                                                <img src="/img/cost.svg" alt="cost">
+                                                <span>От 1 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="restaurant">
+                                <a href="#" class="restaurant-item">
+                                    <div class="restaurant-image">
+                                        <img src="/img/rest.png" alt="rest" class="rest">
+                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                    </div>
+                                    <div class="restaurant-information">
+                                        <div class="restaurant-title">
+                                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, itaque.</h4>
+                                            <div class="stars">
+                                                <img src="/img/star.svg" alt="star">
+                                                <span class="count">4,4</span>
+                                            </div>
+                                        </div>
+                                        <div class="restaurant-text-labels">
+                                            <ul class="text-labels">
+                                                <li class="text-label">Грузинская кухня</li>
+                                            </ul>
+                                        </div>
+                                        <div class="delivery-info">
+                                            <div class="time delivery">
+                                                <img src="/img/our_courier.svg" alt="our">
+                                                <span>30-40 мин</span>
+                                            </div>
+                                            <div class="cost delivery">
+                                                <img src="/img/cost.svg" alt="cost">
+                                                <span>От 1 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="restaurant">
+                                <a href="#" class="restaurant-item">
+                                    <div class="restaurant-image">
+                                        <img src="/img/rest.png" alt="rest" class="rest">
+                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                    </div>
+                                    <div class="restaurant-information">
+                                        <div class="restaurant-title">
+                                            <h4>Хинкали</h4>
+                                            <div class="stars">
+                                                <img src="/img/star.svg" alt="star">
+                                                <span class="count">4,4</span>
+                                            </div>
+                                        </div>
+                                        <div class="restaurant-text-labels">
+                                            <ul class="text-labels">
+                                                <li class="text-label">Грузинская кухня</li>
+                                            </ul>
+                                        </div>
+                                        <div class="delivery-info">
+                                            <div class="time delivery">
+                                                <img src="/img/our_courier.svg" alt="our">
+                                                <span>30-40 мин</span>
+                                            </div>
+                                            <div class="cost delivery">
+                                                <img src="/img/cost.svg" alt="cost">
+                                                <span>От 1 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="restaurant">
+                                <a href="#" class="restaurant-item">
+                                    <div class="restaurant-image">
+                                        <img src="/img/rest.png" alt="rest" class="rest">
+                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                    </div>
+                                    <div class="restaurant-information">
+                                        <div class="restaurant-title">
+                                            <h4>Хинкали</h4>
+                                            <div class="stars">
+                                                <img src="/img/star.svg" alt="star">
+                                                <span class="count">4,4</span>
+                                            </div>
+                                        </div>
+                                        <div class="restaurant-text-labels">
+                                            <ul class="text-labels">
+                                                <li class="text-label">Грузинская кухня</li>
+                                            </ul>
+                                        </div>
+                                        <div class="delivery-info">
+                                            <div class="time delivery">
+                                                <img src="/img/our_courier.svg" alt="our">
+                                                <span>30-40 мин</span>
+                                            </div>
+                                            <div class="cost delivery">
+                                                <img src="/img/cost.svg" alt="cost">
+                                                <span>От 1 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="restaurant">
+                                <a href="#" class="restaurant-item">
+                                    <div class="restaurant-image">
+                                        <img src="/img/rest.png" alt="rest" class="rest">
+                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                    </div>
+                                    <div class="restaurant-information">
+                                        <div class="restaurant-title">
+                                            <h4>Хинкали</h4>
+                                            <div class="stars">
+                                                <img src="/img/star.svg" alt="star">
+                                                <span class="count">4,4</span>
+                                            </div>
+                                        </div>
+                                        <div class="restaurant-text-labels">
+                                            <ul class="text-labels">
+                                                <li class="text-label">Грузинская кухня</li>
+                                            </ul>
+                                        </div>
+                                        <div class="delivery-info">
+                                            <div class="time delivery">
+                                                <img src="/img/our_courier.svg" alt="our">
+                                                <span>30-40 мин</span>
+                                            </div>
+                                            <div class="cost delivery">
+                                                <img src="/img/cost.svg" alt="cost">
+                                                <span>От 1 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="restaurant">
+                                <a href="#" class="restaurant-item">
+                                    <div class="restaurant-image">
+                                        <img src="/img/rest.png" alt="rest" class="rest">
+                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                    </div>
+                                    <div class="restaurant-information">
+                                        <div class="restaurant-title">
+                                            <h4>Хинкали</h4>
+                                            <div class="stars">
+                                                <img src="/img/star.svg" alt="star">
+                                                <span class="count">4,4</span>
+                                            </div>
+                                        </div>
+                                        <div class="restaurant-text-labels">
+                                            <ul class="text-labels">
+                                                <li class="text-label">Грузинская кухня</li>
+                                            </ul>
+                                        </div>
+                                        <div class="delivery-info">
+                                            <div class="time delivery">
+                                                <img src="/img/our_courier.svg" alt="our">
+                                                <span>30-40 мин</span>
+                                            </div>
+                                            <div class="cost delivery">
+                                                <img src="/img/cost.svg" alt="cost">
+                                                <span>От 1 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="other-restaurant-button">
+                            <button class="other-restaurant active-other-rest">Показать ещё рестораны</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-button-mb">
+                <button class="active">Корзина 365 ₽</button>
+            </div>
+            <div class="basket" :class="{'hide': !basket}">
+                <div class="clear">
+                    <button>
+                        <span>Очистить корзину</span>
+                        <img src="/img/trash.svg" alt="trash">
                     </button>
                 </div>
-            </div>
-        </div>
-        <div class="search-block">
-            <div class="container">
-                <div class="content">
-                    <input type="text" class="search" placeholder="Поиск блюд и ресторанов">
-                    <img src="/img/search.svg" alt="search">
-                </div>
-            </div>
-        </div>
-        <div class="action-block">
-            <div class="container">
-                <div class="content">
-                    <div class="block-title">
-                        <h2 class="default-title">Акции и скидки</h2>
+                <div class="basket-body">
+                    <div class="title">
+                        <h2>Макдональдс</h2>
                     </div>
-                    <ul class="action-list">
-                        <li class="action-item">
-                            <a href="#" class="action-link">
-                                <div class="image-block">
-                                    <img src="/img/action.png" alt="action">
+                    <hr class="b-line">
+                    <ul class="b-list">
+                        <li>
+                            <div class="b-title">
+                                <span>• БигМак</span>
+                                <div class="b-data">
+                                    <span>x2</span>
+                                    <span>135 ₽</span>
                                 </div>
-                                <div class="action-info-block">
-                                    <div class="action-label">
-                                        <img src="/img/label.svg" alt="label">
-                                        <h4 class="action-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, non.</h4>
-                                    </div>
-                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                </div>
-                            </a>
+                            </div>
+                            <ul class="options">
+                                <li class="option">+ соус Биг Мак</li>
+                                <li class="option">+ лук</li>
+                            </ul>
+                            <hr class="b-line">
                         </li>
-                        <li class="action-item">
-                            <a href="#" class="action-link">
-                                <div class="image-block">
-                                    <img src="/img/action.png" alt="action">
+                        <li>
+                            <div class="b-title">
+                                <span>• БигМак</span>
+                                <div class="b-data">
+                                    <span>x2</span>
+                                    <span>135 ₽</span>
                                 </div>
-                                <div class="action-info-block">
-                                    <div class="action-label">
-                                        <img src="/img/label.svg" alt="label">
-                                        <h4 class="action-title">Cinnabon</h4>
-                                    </div>
-                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                </div>
-                            </a>
+                            </div>
+                            <ul class="options">
+                                <li class="option">+ соус Биг Мак</li>
+                                <li class="option">+ лук</li>
+                            </ul>
+                            <hr class="b-line">
                         </li>
-                        <li class="action-item">
-                            <a href="#" class="action-link">
-                                <div class="image-block">
-                                    <img src="/img/action.png" alt="action">
+                        <li>
+                            <div class="b-title">
+                                <span>• БигМак</span>
+                                <div class="b-data">
+                                    <span>x2</span>
+                                    <span>135 ₽</span>
                                 </div>
-                                <div class="action-info-block">
-                                    <div class="action-label">
-                                        <img src="/img/label.svg" alt="label">
-                                        <h4 class="action-title">Cinnabon</h4>
-                                    </div>
-                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                </div>
-                            </a>
+                            </div>
+                            <ul class="options">
+                                <li class="option">+ соус Биг Мак</li>
+                                <li class="option">+ лук</li>
+                            </ul>
+                            <hr class="b-line">
                         </li>
-                        <li class="action-item">
-                            <a href="#" class="action-link">
-                                <div class="image-block">
-                                    <img src="/img/action.png" alt="action">
+                        <li>
+                            <div class="b-title">
+                                <span>• Картофель Фри средний</span>
+                                <div class="b-data">
+                                    <span>x2</span>
+                                    <span>135 ₽</span>
                                 </div>
-                                <div class="action-info-block">
-                                    <div class="action-label">
-                                        <img src="/img/label.svg" alt="label">
-                                        <h4 class="action-title">Cinnabon</h4>
-                                    </div>
-                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                </div>
-                            </a>
+                            </div>
+                            <ul class="options">
+                                <li class="option">- соль</li>
+                            </ul>
+                            <hr class="b-line">
                         </li>
-                        <li class="action-item">
-                            <a href="#" class="action-link">
-                                <div class="image-block">
-                                    <img src="/img/action.png" alt="action">
+                        <li>
+                            <div class="b-title">
+                                <span>Доставка</span>
+                                <div class="b-data">
+                                    <span>135 ₽</span>
                                 </div>
-                                <div class="action-info-block">
-                                    <div class="action-label">
-                                        <img src="/img/label.svg" alt="label">
-                                        <h4 class="action-title">Cinnabon</h4>
-                                    </div>
-                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="action-item">
-                            <a href="#" class="action-link">
-                                <div class="image-block">
-                                    <img src="/img/action.png" alt="action">
-                                </div>
-                                <div class="action-info-block">
-                                    <div class="action-label">
-                                        <img src="/img/label.svg" alt="label">
-                                        <h4 class="action-title">Cinnabon</h4>
-                                    </div>
-                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="action-item">
-                            <a href="#" class="action-link">
-                                <div class="image-block">
-                                    <img src="/img/action.png" alt="action">
-                                </div>
-                                <div class="action-info-block">
-                                    <div class="action-label">
-                                        <img src="/img/label.svg" alt="label">
-                                        <h4 class="action-title">Cinnabon</h4>
-                                    </div>
-                                    <p>При заказе от 1500 ₽ - в подарок мороженое</p>
-                                </div>
-                            </a>
+                            </div>
+                            <ul class="options">
+                                <li class="option">Закажите еще на 400 ₽ для бесплатной доставки</li>
+                            </ul>
+                            <hr class="b-line">
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-        <div class="restaurant-block">
-            <div class="container">
-                <div class="content">
-                    <div class="block-title">
-                        <h2 class="default-title">Рестораны</h2>
+                <div class="basket-price">
+                    <div class="price">
+                        <h3>Итого:</h3>
+                        <h3>365 ₽</h3>
                     </div>
-                    <ul class="restaurant-list">
-                        <li class="restaurant">
-                            <a href="#" class="restaurant-item">
-                                <div class="restaurant-image">
-                                    <img src="/img/rest.png" alt="rest" class="rest">
-                                    <img src="/img/label.svg" alt="label" class="rest-label">
-                                </div>
-                                <div class="restaurant-information">
-                                    <div class="restaurant-title">
-                                        <h4>Хинкали</h4>
-                                        <div class="stars">
-                                            <img src="/img/star.svg" alt="star">
-                                            <span class="count">4,4</span>
-                                        </div>
-                                    </div>
-                                    <div class="restaurant-text-labels">
-                                        <ul class="text-labels">
-                                            <li class="text-label">Грузинская кухня</li>
-                                        </ul>
-                                    </div>
-                                    <div class="delivery-info">
-                                        <div class="time delivery">
-                                            <img src="/img/our_courier.svg" alt="our">
-                                            <span>30-40 мин</span>
-                                        </div>
-                                        <div class="cost delivery">
-                                            <img src="/img/cost.svg" alt="cost">
-                                            <span>От 1 ₽</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="restaurant">
-                            <a href="#" class="restaurant-item">
-                                <div class="restaurant-image">
-                                    <img src="/img/rest.png" alt="rest" class="rest">
-                                    <img src="/img/label.svg" alt="label" class="rest-label">
-                                </div>
-                                <div class="restaurant-information">
-                                    <div class="restaurant-title">
-                                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, itaque.</h4>
-                                        <div class="stars">
-                                            <img src="/img/star.svg" alt="star">
-                                            <span class="count">4,4</span>
-                                        </div>
-                                    </div>
-                                    <div class="restaurant-text-labels">
-                                        <ul class="text-labels">
-                                            <li class="text-label">Грузинская кухня</li>
-                                        </ul>
-                                    </div>
-                                    <div class="delivery-info">
-                                        <div class="time delivery">
-                                            <img src="/img/our_courier.svg" alt="our">
-                                            <span>30-40 мин</span>
-                                        </div>
-                                        <div class="cost delivery">
-                                            <img src="/img/cost.svg" alt="cost">
-                                            <span>От 1 ₽</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="restaurant">
-                            <a href="#" class="restaurant-item">
-                                <div class="restaurant-image">
-                                    <img src="/img/rest.png" alt="rest" class="rest">
-                                    <img src="/img/label.svg" alt="label" class="rest-label">
-                                </div>
-                                <div class="restaurant-information">
-                                    <div class="restaurant-title">
-                                        <h4>Хинкали</h4>
-                                        <div class="stars">
-                                            <img src="/img/star.svg" alt="star">
-                                            <span class="count">4,4</span>
-                                        </div>
-                                    </div>
-                                    <div class="restaurant-text-labels">
-                                        <ul class="text-labels">
-                                            <li class="text-label">Грузинская кухня</li>
-                                        </ul>
-                                    </div>
-                                    <div class="delivery-info">
-                                        <div class="time delivery">
-                                            <img src="/img/our_courier.svg" alt="our">
-                                            <span>30-40 мин</span>
-                                        </div>
-                                        <div class="cost delivery">
-                                            <img src="/img/cost.svg" alt="cost">
-                                            <span>От 1 ₽</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="restaurant">
-                            <a href="#" class="restaurant-item">
-                                <div class="restaurant-image">
-                                    <img src="/img/rest.png" alt="rest" class="rest">
-                                    <img src="/img/label.svg" alt="label" class="rest-label">
-                                </div>
-                                <div class="restaurant-information">
-                                    <div class="restaurant-title">
-                                        <h4>Хинкали</h4>
-                                        <div class="stars">
-                                            <img src="/img/star.svg" alt="star">
-                                            <span class="count">4,4</span>
-                                        </div>
-                                    </div>
-                                    <div class="restaurant-text-labels">
-                                        <ul class="text-labels">
-                                            <li class="text-label">Грузинская кухня</li>
-                                        </ul>
-                                    </div>
-                                    <div class="delivery-info">
-                                        <div class="time delivery">
-                                            <img src="/img/our_courier.svg" alt="our">
-                                            <span>30-40 мин</span>
-                                        </div>
-                                        <div class="cost delivery">
-                                            <img src="/img/cost.svg" alt="cost">
-                                            <span>От 1 ₽</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="restaurant">
-                            <a href="#" class="restaurant-item">
-                                <div class="restaurant-image">
-                                    <img src="/img/rest.png" alt="rest" class="rest">
-                                    <img src="/img/label.svg" alt="label" class="rest-label">
-                                </div>
-                                <div class="restaurant-information">
-                                    <div class="restaurant-title">
-                                        <h4>Хинкали</h4>
-                                        <div class="stars">
-                                            <img src="/img/star.svg" alt="star">
-                                            <span class="count">4,4</span>
-                                        </div>
-                                    </div>
-                                    <div class="restaurant-text-labels">
-                                        <ul class="text-labels">
-                                            <li class="text-label">Грузинская кухня</li>
-                                        </ul>
-                                    </div>
-                                    <div class="delivery-info">
-                                        <div class="time delivery">
-                                            <img src="/img/our_courier.svg" alt="our">
-                                            <span>30-40 мин</span>
-                                        </div>
-                                        <div class="cost delivery">
-                                            <img src="/img/cost.svg" alt="cost">
-                                            <span>От 1 ₽</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="restaurant">
-                            <a href="#" class="restaurant-item">
-                                <div class="restaurant-image">
-                                    <img src="/img/rest.png" alt="rest" class="rest">
-                                    <img src="/img/label.svg" alt="label" class="rest-label">
-                                </div>
-                                <div class="restaurant-information">
-                                    <div class="restaurant-title">
-                                        <h4>Хинкали</h4>
-                                        <div class="stars">
-                                            <img src="/img/star.svg" alt="star">
-                                            <span class="count">4,4</span>
-                                        </div>
-                                    </div>
-                                    <div class="restaurant-text-labels">
-                                        <ul class="text-labels">
-                                            <li class="text-label">Грузинская кухня</li>
-                                        </ul>
-                                    </div>
-                                    <div class="delivery-info">
-                                        <div class="time delivery">
-                                            <img src="/img/our_courier.svg" alt="our">
-                                            <span>30-40 мин</span>
-                                        </div>
-                                        <div class="cost delivery">
-                                            <img src="/img/cost.svg" alt="cost">
-                                            <span>От 1 ₽</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="other-restaurant-button">
-                        <button class="other-restaurant active-other-rest">Показать ещё рестораны</button>
+                    <div class="order-done">
+                        <button class="active">Оформить заказ</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="footer">
-                <div class="main-footer">
-                    <div class="left">
-                        <div class="logo">
-                            <img src="/img/footer_logo.svg" alt="logo" class="f-logo">
-                            <img src="/img/footer_name.svg" alt="name" class="f-name">
+            <div class="mb-basket">
+                
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="main-footer">
+                        <div class="left">
+                            <div class="logo">
+                                <img src="/img/footer_logo.svg" alt="logo" class="f-logo">
+                                <img src="/img/footer_name.svg" alt="name" class="f-name">
+                            </div>
+                            <ul class="footer-pages">
+                                <li class="page">
+                                    <a href="#">Контакты</a>
+                                </li>
+                                <li class="page">
+                                    <a href="#">Вопросы и ответы</a>
+                                </li>
+                                <li class="page">
+                                    <a href="#">Стать курьером</a>
+                                </li>
+                                <li class="page">
+                                    <a href="#">Стать партнером</a>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="footer-pages">
-                            <li class="page">
-                                <a href="#">Контакты</a>
-                            </li>
-                            <li class="page">
-                                <a href="#">Вопросы и ответы</a>
-                            </li>
-                            <li class="page">
-                                <a href="#">Стать курьером</a>
-                            </li>
-                            <li class="page">
-                                <a href="#">Стать партнером</a>
-                            </li>
-                        </ul>
+                        <div class="right">
+                            <div class="apps">
+                                <a href="#">
+                                    <img src="/img/android.svg" alt="android">
+                                </a>
+                                <a href="#" class="hdn">
+                                    <img src="/img/ios.svg" alt="ios">
+                                </a>
+                            </div>
+                            <ul class="networks">
+                                <li class="network">
+                                    <a href="#">
+                                        <img src="/img/vk.svg" alt="vk">
+                                    </a>
+                                </li>
+                                <li class="network">
+                                    <a href="#">
+                                        <img src="/img/ig.svg" alt="ig">
+                                    </a>
+                                </li>
+                                <li class="network">
+                                    <a href="#">
+                                        <img src="/img/tg.svg" alt="tg">
+                                    </a>
+                                </li>
+                                <li class="network">
+                                    <a href="#">
+                                        <img src="/img/fb.svg" alt="fb">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="right">
-                        <div class="apps">
+                    <hr class="line">
+                    <div class="info-footer">
+                        <div class="copy">
+                            <span>&copy; 2019 ООО «ДоставкаЕД»</span>
+                        </div>
+                        <div class="terms-of-use">
+                            <a href="#">Пользовательское соглашение</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-footer">
+                    <div class="logo">
+                        <div class="eda-logo">
+                            <img src="/img/footer_logo.svg" alt="logo" class="fm-logo">
+                            <img src="/img/footer_name.svg" alt="name" class="fm-name">
+                        </div>
+                        <div class="mb-apps">
+                            <img src="/img/android.svg" alt="android">
+                            <img src="/img/ios.svg" alt="ios" class="hdn">
+                        </div>
+                    </div>
+                    <hr class="line">
+                    <ul class="networks">
+                        <li class="network">
                             <a href="#">
-                                <img src="/img/android.svg" alt="android">
+                                <img src="/img/vk.svg" alt="vk">
                             </a>
-                            <a href="#" class="hdn">
-                                <img src="/img/ios.svg" alt="ios">
+                        </li>
+                        <li class="network">
+                            <a href="#">
+                                <img src="/img/ig.svg" alt="ig">
                             </a>
+                        </li>
+                        <li class="network">
+                            <a href="#">
+                                <img src="/img/tg.svg" alt="tg">
+                            </a>
+                        </li>
+                        <li class="network">
+                            <a href="#">
+                                <img src="/img/fb.svg" alt="fb">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-pages">
+                        <li class="page">
+                            <a href="#">Контакты</a>
+                        </li>
+                        <li class="page">
+                            <a href="#">Вопросы и ответы</a>
+                        </li>
+                        <li class="page">
+                            <a href="#">Стать курьером</a>
+                        </li>
+                        <li class="page">
+                            <a href="#">Стать партнером</a>
+                        </li>
+                    </ul>
+                    <hr class="line">
+                    <div class="info-footer">
+                        <div class="copy">
+                            <span>&copy; 2019 ООО «ДоставкаЕД»</span>
                         </div>
-                        <ul class="networks">
-                            <li class="network">
-                                <a href="#">
-                                    <img src="/img/vk.svg" alt="vk">
-                                </a>
-                            </li>
-                            <li class="network">
-                                <a href="#">
-                                    <img src="/img/ig.svg" alt="ig">
-                                </a>
-                            </li>
-                            <li class="network">
-                                <a href="#">
-                                    <img src="/img/tg.svg" alt="tg">
-                                </a>
-                            </li>
-                            <li class="network">
-                                <a href="#">
-                                    <img src="/img/fb.svg" alt="fb">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <hr class="line">
-                <div class="info-footer">
-                    <div class="copy">
-                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
-                    </div>
-                    <div class="terms-of-use">
-                        <a href="#">Пользовательское соглашение</a>
+                        <div class="terms-of-use">
+                            <a href="#">Пользовательское соглашение</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="mobile-footer">
-                <div class="logo">
-                    <div class="eda-logo">
-                        <img src="/img/footer_logo.svg" alt="logo" class="fm-logo">
-                        <img src="/img/footer_name.svg" alt="name" class="fm-name">
-                    </div>
-                    <div class="mb-apps">
-                        <img src="/img/android.svg" alt="android">
-                        <img src="/img/ios.svg" alt="ios" class="hdn">
-                    </div>
-                </div>
-                <hr class="line">
-                <ul class="networks">
-                    <li class="network">
-                        <a href="#">
-                            <img src="/img/vk.svg" alt="vk">
-                        </a>
-                    </li>
-                    <li class="network">
-                        <a href="#">
-                            <img src="/img/ig.svg" alt="ig">
-                        </a>
-                    </li>
-                    <li class="network">
-                        <a href="#">
-                            <img src="/img/tg.svg" alt="tg">
-                        </a>
-                    </li>
-                    <li class="network">
-                        <a href="#">
-                            <img src="/img/fb.svg" alt="fb">
-                        </a>
-                    </li>
-                </ul>
-                <ul class="footer-pages">
-                    <li class="page">
-                        <a href="#">Контакты</a>
-                    </li>
-                    <li class="page">
-                        <a href="#">Вопросы и ответы</a>
-                    </li>
-                    <li class="page">
-                        <a href="#">Стать курьером</a>
-                    </li>
-                    <li class="page">
-                        <a href="#">Стать партнером</a>
-                    </li>
-                </ul>
-                <hr class="line">
-                <div class="info-footer">
-                    <div class="copy">
-                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
-                    </div>
-                    <div class="terms-of-use">
-                        <a href="#">Пользовательское соглашение</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <script>
+        new Vue({
+            el: '#body',
+            data(){
+                return {
+                    signIn: false,
+                    mobile: false,
+                    time: false,
+                    basket: false
+                }
+            }
+        })
+    </script>
 </body>
 </html>

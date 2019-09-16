@@ -1,0 +1,11 @@
+<svg id="геотег" xmlns="http://www.w3.org/2000/svg" width="10.734" height="15.898" viewBox="0 0 10.734 15.898">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b4b4b;
+      }
+    </style>
+  </defs>
+  <path id="Path_85" data-name="Path 85" class="cls-1" d="M30.2,13.574a5.367,5.367,0,0,0-10.734,0c0,4.247,5.367,10.531,5.367,10.531S30.2,17.8,30.2,13.574Zm-8.014-.32A2.647,2.647,0,1,1,24.837,15.9,2.647,2.647,0,0,1,22.19,13.253Z" transform="translate(-19.47 -8.207)"/>
+  <ellipse id="Ellipse_19" data-name="Ellipse 19" class="cls-1" cx="1.302" cy="1.302" rx="1.302" ry="1.302" transform="translate(4.065 3.745)"/>
+</svg>

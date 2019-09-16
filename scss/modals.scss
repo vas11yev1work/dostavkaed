@@ -1,0 +1,113 @@
+$white: #FFFFFF;
+$black: #4B4B4B;
+$red: #DE3E26;
+$border: #D2D2D2;
+$main: #2A2A2A;
+$grey: #858585;
+$cat: #F8F8F8;
+$hover: #ECECEC;
+
+.modal{
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    transition: 0.2s;
+    &.hide{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .modal-window{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 480px;
+        width: 100%;
+        background-color: $white;
+        padding: 50px 40px 40px 40px;
+        position: relative;
+        border-radius: 7px;
+        .close-button{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+        }
+        .title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            h3{
+                max-width: 300px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .modal-sign-in{
+        .content{
+            input{
+                height: 34px;
+                width: 100%;
+                border: 1px solid $border;
+                border-radius: 4px;
+                padding: 0 10px;
+                margin-right: 10px;
+            }
+            .field{
+                display: flex;
+                margin-bottom: 10px;
+                .code-button{
+                    min-width: 130px;
+                    width: 130px;
+                }
+            }
+            .info{
+                p{
+                    font-size: 14px;
+                    text-align: center;
+                    a{
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+    .time{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .select-day{
+            display: flex;
+            .tm{
+                margin-right: 15px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        .select-time{
+            margin-top: 20px;
+            .selected{
+                color: $grey;
+                font-size: 18px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                &.s-active{
+                    color: $black;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+

@@ -2,6 +2,7 @@ $white: #FFFFFF;
 $black: #4B4B4B;
 $hover: #ECECEC;
 $red: #DE3E26;
+$not-active: #AAAAAA;
 
 button{
     font-size: 14px;
@@ -99,4 +100,24 @@ button{
     img{
         width: 10px;
     }
+}
+
+.not-active{
+    height: 34px;
+    padding: 0 20px;
+    background-color: transparent;
+    border: 2px solid $not-active;
+    border-radius: 4px;
+    color: $not-active;
+    font-size: 14px;
+}
+
+.red{
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color: $red;
+    color: $white;
+    box-shadow: 0 2px 6px rgba(0,0,0,.16);
 }

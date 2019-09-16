@@ -113,6 +113,12 @@ footer .mobile-footer {
   display: none;
 }
 
+@media (max-width: 768px) {
+  footer {
+    margin-bottom: 80px;
+  }
+}
+
 @media (max-width: 575px) {
   footer .footer {
     display: none;

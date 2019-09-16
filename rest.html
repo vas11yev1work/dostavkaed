@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ДоставкаЕД - доставка еды из ресторанов в Санкт-Петербурге</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/modals.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="#" class="logo-link">
+                        <img src="/img/logo.svg" alt="logo" class="i-logo">
+                        <img src="/img/name.svg" alt="name" class="i-name">
+                    </a>
+                </div>
+                <div class="address-string">
+                    <div class="search">
+                        <input type="text" placeholder="Адрес доставки" class="address">
+                        <img src="/img/map.svg" alt="map" class="map">
+                    </div>
+                    <div class="time">
+                        <div class="time-select">
+                            <div class="date">
+                                <img src="/img/time.svg" alt="time">
+                                <span>Сегодня</span>
+                            </div>
+                            <div class="arrow-down">
+                                <img src="/img/arrow.svg" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="transition"></div>
+                        <ul class="select-time">
+                            <li>Сегодня</li>
+                            <li>Завтра</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="white-active-button sign-in">
+                        Вход
+                    </button>
+                    <button class="white-active-button basket">
+                        Корзина
+                    </button>
+                </div>
+                <div class="bars">
+                    <button class="menu-button">
+                        <img src="/img/bars.svg" alt="bars">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="rest">
+            <div class="rest-data">
+                <div class="container">
+                    <div class="rest-text">
+                        <div class="rest-title">
+                            <h3>Макдональдс</h3>
+                            <ul class="rest-list">
+                                <li class="rest-item">Бургеры</li>
+                                <li class="rest-item">Фастфуд</li>
+                            </ul>
+                            <div class="mb">
+                                <img src="/img/star_white.svg" alt="star">
+                                <span>4,8</span>
+                            </div>
+                        </div>
+                        <hr class="line">
+                        <div class="rest-delivery">
+                            <div class="left">
+                                <ul class="delivery-info">
+                                    <li class="d-info">
+                                        <div class="img">
+                                            <img src="img/logo-rest.svg" alt="logo-rest">
+                                        </div>
+                                        <span>Доставка 30-40 минут курьером ДоставкаЕД</span>
+                                    </li>
+                                    <li class="d-info">
+                                        <div class="img">
+                                            <img src="img/money-rest.svg" alt="money-rest">
+                                        </div>
+                                        <span>Минимальная сумма заказа 1 ₽   •   Стоимость доставки 99 ₽</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <ul class="rest-i">
+                                    <li>
+                                        <img src="/img/star_white.svg" alt="star">
+                                        <span>4,8</span>
+                                    </li>
+                                    <li class="rest-info-text">
+                                        <span>Информация о ресторане</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rest-menu">
+                <div class="container">
+                    <ul class="menu">
+                        <li class="menu-item menu-active">Популярное</li>
+                        <li class="menu-item">Бургеры</li>
+                        <li class="menu-item">Картошка</li>
+                        <li class="menu-item">МакКомбо</li>
+                        <li class="menu-item">Роллы</li>
+                        <li class="menu-item">Бургеры</li>
+                        <li class="menu-item">Картошка</li>
+                        <li class="menu-item">МакКомбо</li>
+                        <li class="menu-item">Роллы</li>
+                        <li class="menu-item">Бургеры</li>
+                        <li class="menu-item">Картошка</li>
+                        <li class="menu-item">МакКомбо</li>
+                        <li class="menu-item">Роллы</li>
+                        <li class="menu-item">Бургеры</li>
+                        <li class="menu-item">Картошка</li>
+                        <li class="menu-item">МакКомбо</li>
+                        <li class="menu-item">Роллы</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rest-block">
+                <div class="container">
+                    <div class="rest-wrap">
+                        <div class="rest-food">
+                            <div class="present">
+                                <img src="/img/present.svg" alt="prenent">
+                                <div class="present-text">
+                                    <h4 class="p-title">Блюдо в подарок!</h4>
+                                    <p>При заказе от 500 ₽ - пирожок с малиной в подарок!</p>
+                                </div>
+                            </div>
+                            <div class="rest-foodblock popular">
+                                <div class="foodblock-title">
+                                    <h3>Популярное</h3>
+                                </div>
+                                <div class="foodblocks">
+                                    <div class="foodblock">
+                                        <div class="fb-title">
+                                            <h4>БигМак</h4>
+                                            <h4 class="price">135 ₽</h4>
+                                        </div>
+                                        <hr class="fb-line">
+                                        <div class="fb-img">
+                                            <img src="/img/brgr.png" alt="brgr">
+                                        </div>
+                                        <div class="fb-text">
+                                            <p>Два бифштекса из 100% говядины на 
+                                                специальной булочке «Биг Мак», 
+                                                заправленной луком, двумя кусочками 
+                                                маринованных огурчиков, ломтиком 
+                                                сыра «Чеддер», салатом, и 
+                                                специальным соусом «Биг Мак».
+                                            </p>
+                                        </div>
+                                        <div class="basket-done">
+                                            <img src="/img/basket-done.svg" alt="bd">
+                                        </div>
+                                    </div>
+                                    <div class="foodblock">
+                                        <div class="fb-title">
+                                            <h4>БигМак</h4>
+                                            <h4 class="price">135 ₽</h4>
+                                        </div>
+                                        <hr class="fb-line">
+                                        <div class="fb-img">
+                                            <img src="/img/brgr.png" alt="brgr">
+                                        </div>
+                                        <div class="fb-text">
+                                            <p>Два бифштекса из 100% говядины на 
+                                                специальной булочке «Биг Мак», 
+                                                заправленной луком, двумя кусочками 
+                                                маринованных огурчиков, ломтиком 
+                                                сыра «Чеддер», салатом, и 
+                                                специальным соусом «Биг Мак».
+                                            </p>
+                                        </div>
+                                        <div class="basket-done">
+                                            <img src="/img/basket-done.svg" alt="bd">
+                                        </div>
+                                    </div>
+                                    <div class="foodblock">
+                                        <div class="fb-title">
+                                            <h4>БигМак</h4>
+                                            <h4 class="price">135 ₽</h4>
+                                        </div>
+                                        <hr class="fb-line">
+                                        <div class="fb-img">
+                                            <img src="/img/brgr.png" alt="brgr">
+                                        </div>
+                                        <div class="fb-text">
+                                            <p>Два бифштекса из 100% говядины на 
+                                                специальной булочке «Биг Мак», 
+                                                заправленной луком, двумя кусочками 
+                                                маринованных огурчиков, ломтиком 
+                                                сыра «Чеддер», салатом, и 
+                                                специальным соусом «Биг Мак».
+                                            </p>
+                                        </div>
+                                        <div class="basket-done">
+                                            <img src="/img/basket-done.svg" alt="bd">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rest-foodblock popular">
+                                <div class="foodblock-title">
+                                    <h3>Популярное</h3>
+                                </div>
+                                <div class="foodblocks">
+                                    <div class="foodblock">
+                                        <div class="fb-title">
+                                            <h4>БигМак</h4>
+                                            <h4 class="price">135 ₽</h4>
+                                        </div>
+                                        <hr class="fb-line">
+                                        <div class="fb-img">
+                                            <img src="/img/brgr.png" alt="brgr">
+                                        </div>
+                                        <div class="fb-text">
+                                            <p>Два бифштекса из 100% говядины на 
+                                                специальной булочке «Биг Мак», 
+                                                заправленной луком, двумя кусочками 
+                                                маринованных огурчиков, ломтиком 
+                                                сыра «Чеддер», салатом, и 
+                                                специальным соусом «Биг Мак».
+                                            </p>
+                                        </div>
+                                        <div class="basket-done">
+                                            <img src="/img/basket-done.svg" alt="bd">
+                                        </div>
+                                    </div>
+                                    <div class="foodblock">
+                                        <div class="fb-title">
+                                            <h4>БигМак</h4>
+                                            <h4 class="price">135 ₽</h4>
+                                        </div>
+                                        <hr class="fb-line">
+                                        <div class="fb-img">
+                                            <img src="/img/brgr.png" alt="brgr">
+                                        </div>
+                                        <div class="fb-text">
+                                            <p>Два бифштекса из 100% говядины на 
+                                                специальной булочке «Биг Мак», 
+                                                заправленной луком, двумя кусочками 
+                                                маринованных огурчиков, ломтиком 
+                                                сыра «Чеддер», салатом, и 
+                                                специальным соусом «Биг Мак».
+                                            </p>
+                                        </div>
+                                        <div class="basket-done">
+                                            <img src="/img/basket-done.svg" alt="bd">
+                                        </div>
+                                    </div>
+                                    <div class="foodblock">
+                                        <div class="fb-title">
+                                            <h4>БигМак</h4>
+                                            <h4 class="price">135 ₽</h4>
+                                        </div>
+                                        <hr class="fb-line">
+                                        <div class="fb-img">
+                                            <img src="/img/brgr.png" alt="brgr">
+                                        </div>
+                                        <div class="fb-text">
+                                            <p>Два бифштекса из 100% говядины на 
+                                                специальной булочке «Биг Мак», 
+                                                заправленной луком, двумя кусочками 
+                                                маринованных огурчиков, ломтиком 
+                                                сыра «Чеддер», салатом, и 
+                                                специальным соусом «Биг Мак».
+                                            </p>
+                                        </div>
+                                        <div class="basket-done">
+                                            <img src="/img/basket-done.svg" alt="bd">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r-basket">
+                            <div class="basket-block">
+                                <div class="clear">
+                                    <button>
+                                        <span>Очистить корзину</span>
+                                        <img src="/img/trash.svg" alt="trash">
+                                    </button>
+                                </div>
+                                <div class="basket-body">
+                                    <div class="title">
+                                        <h2>Макдональдс</h2>
+                                    </div>
+                                    <hr class="b-line">
+                                    <ul class="b-list">
+                                        <li>
+                                            <div class="b-title">
+                                                <span>• БигМак</span>
+                                                <div class="b-data">
+                                                    <span>x2</span>
+                                                    <span>135 ₽</span>
+                                                </div>
+                                            </div>
+                                            <ul class="options">
+                                                <li class="option">+ соус Биг Мак</li>
+                                                <li class="option">+ лук</li>
+                                            </ul>
+                                            <hr class="b-line">
+                                        </li>
+                                        <li>
+                                            <div class="b-title">
+                                                <span>• Картофель Фри средний</span>
+                                                <div class="b-data">
+                                                    <span>x2</span>
+                                                    <span>135 ₽</span>
+                                                </div>
+                                            </div>
+                                            <ul class="options">
+                                                <li class="option">- соль</li>
+                                            </ul>
+                                            <hr class="b-line">
+                                        </li>
+                                        <li>
+                                            <div class="b-title">
+                                                <span>Доставка</span>
+                                                <div class="b-data">
+                                                    <span>135 ₽</span>
+                                                </div>
+                                            </div>
+                                            <ul class="options">
+                                                <li class="option">Закажите еще на 400 ₽ для бесплатной доставки</li>
+                                            </ul>
+                                            <hr class="b-line">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="basket-price">
+                                    <div class="price">
+                                        <h3>Итого:</h3>
+                                        <h3>365 ₽</h3>
+                                    </div>
+                                    <div class="order-done">
+                                        <button class="active">Оформить заказ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-button-mb">
+            <button class="active">Корзина 365 ₽</button>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="main-footer">
+                    <div class="left">
+                        <div class="logo">
+                            <img src="/img/footer_logo.svg" alt="logo" class="f-logo">
+                            <img src="/img/footer_name.svg" alt="name" class="f-name">
+                        </div>
+                        <ul class="footer-pages">
+                            <li class="page">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li class="page">
+                                <a href="#">Вопросы и ответы</a>
+                            </li>
+                            <li class="page">
+                                <a href="#">Стать курьером</a>
+                            </li>
+                            <li class="page">
+                                <a href="#">Стать партнером</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="apps">
+                            <a href="#">
+                                <img src="/img/android.svg" alt="android">
+                            </a>
+                            <a href="#" class="hdn">
+                                <img src="/img/ios.svg" alt="ios">
+                            </a>
+                        </div>
+                        <ul class="networks">
+                            <li class="network">
+                                <a href="#">
+                                    <img src="/img/vk.svg" alt="vk">
+                                </a>
+                            </li>
+                            <li class="network">
+                                <a href="#">
+                                    <img src="/img/ig.svg" alt="ig">
+                                </a>
+                            </li>
+                            <li class="network">
+                                <a href="#">
+                                    <img src="/img/tg.svg" alt="tg">
+                                </a>
+                            </li>
+                            <li class="network">
+                                <a href="#">
+                                    <img src="/img/fb.svg" alt="fb">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="line">
+                <div class="info-footer">
+                    <div class="copy">
+                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
+                    </div>
+                    <div class="terms-of-use">
+                        <a href="#">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-footer">
+                <div class="logo">
+                    <div class="eda-logo">
+                        <img src="/img/footer_logo.svg" alt="logo" class="fm-logo">
+                        <img src="/img/footer_name.svg" alt="name" class="fm-name">
+                    </div>
+                    <div class="mb-apps">
+                        <img src="/img/android.svg" alt="android">
+                        <img src="/img/ios.svg" alt="ios" class="hdn">
+                    </div>
+                </div>
+                <hr class="line">
+                <ul class="networks">
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/vk.svg" alt="vk">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/ig.svg" alt="ig">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/tg.svg" alt="tg">
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="#">
+                            <img src="/img/fb.svg" alt="fb">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer-pages">
+                    <li class="page">
+                        <a href="#">Контакты</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Вопросы и ответы</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Стать курьером</a>
+                    </li>
+                    <li class="page">
+                        <a href="#">Стать партнером</a>
+                    </li>
+                </ul>
+                <hr class="line">
+                <div class="info-footer">
+                    <div class="copy">
+                        <span>&copy; 2019 ООО «ДоставкаЕД»</span>
+                    </div>
+                    <div class="terms-of-use">
+                        <a href="#">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

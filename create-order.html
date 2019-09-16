@@ -63,97 +63,94 @@
     </header>
     <main>
         <div class="container">
-            <div class="my-data">
+            <div class="create-order">
                 <div class="page-title">
-                    <h2>Контакты</h2>
+                    <h2>Оформить заказ</h2>
                 </div>
                 <div class="info-block">
-                    <div class="ct-block-title">
-                        <h3>Служба поддержки клиентов</h3>
-                    </div>
-                    <div class="ct-content">
-                        <ul class="ct-list">
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Санкт-Петербург</span>
+                    <div class="crt-wrap">
+                        <div class="field-wrap">
+                            <div class="crt-title">
+                                <img src="/img/man.svg" alt="man">
+                                <h4>Контактная информация</h4>
+                            </div>
+                            <div class="crt-fields">
+                                <input type="text" name="phone" id="phone" placeholder="Номер мобильного телефона">
+                                <input type="text" name="name" id="name" placeholder="Ваше имя">
+                            </div>
+                        </div>
+                        <div class="field-wrap">
+                            <div class="crt-title">
+                                <img src="/img/map-c.svg" alt="map-c">
+                                <h4>Контактная информация</h4>
+                            </div>
+                            <div class="crt-fields">
+                                <input type="text" name="phone" id="phone" placeholder="Номер мобильного телефона">
+                                <div class="fields-group">
+                                    <input type="text" placeholder="Кв./офис">
+                                    <input type="text" placeholder="Домофон">
+                                    <input type="text" placeholder="Подъезд">
+                                    <input type="text" placeholder="Этаж">
                                 </div>
-                                <div class="value">
-                                    <span>+7(812) 111-11-11</span>
+                                <div class="fields-group-spec">
+                                    <div class="delivery-dropdown">
+                                        <div class="left">
+                                            <img src="/img/time.svg" alt="time">
+                                            <span>Доставить сейчас</span>
+                                        </div>
+                                        <div class="right">
+                                            <img src="/img/arrow.svg" alt="arrow">
+                                        </div>
+                                        <ul class="delivery-time-list">
+                                            <li class="time-select">Доставить сейчас</li>
+                                            <li class="time-select">Выбрать время</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </li>
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Москва</span>
+                            </div>
+                        </div>
+                        <div class="field-wrap">
+                            <div class="crt-title">
+                                <img src="/img/money.svg" alt="money">
+                                <h4>Контактная информация</h4>
+                            </div>
+                            <div class="crt-fields">
+                                <div class="fields-group-spec">
+                                    <select name="pay" id="pay">
+                                        <option value="online">Онлайн по карте</option>
+                                        <option value="offline">Наличными курьеру</option>
+                                    </select>
+                                    <div class="offline-view hide">
+                                        <input type="text" placeholder="Нужна сдача с">
+                                    </div>
+                                    <div class="promocode-field">
+                                        <input type="text" name="promo" id="promo" placeholder="Промокод">
+                                    </div>
+                                    <div class="check-promocode">
+                                        <button class="not-active">Применить</button>
+                                    </div>
                                 </div>
-                                <div class="value">
-                                    <span>+7(495) 111-11-11</span>
+                                <div class="comment">
+                                    <div class="comment-title">
+                                        <span>Комментарий к заказу</span>
+                                    </div>
+                                    <textarea name="com" id="com" placeholder="Напишите коментарий..."></textarea>
                                 </div>
-                            </li>
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Регионы</span>
+                                <div class="person-count">
+                                    <div class="person-title">
+                                        <span>Количество персон</span>
+                                    </div>
+                                    <div class="count-block">
+                                        <button class="count">-</button>
+                                        <span>2</span>
+                                        <button class="count">+</button>
+                                    </div>
                                 </div>
-                                <div class="value">
-                                    <span>+7(800) 111-11-11</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="info-block">
-                    <div class="ct-block-title">
-                        <h3>По вопросам сотрудничества</h3>
-                    </div>
-                    <div class="ct-content">
-                        <ul class="ct-list">
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Отдел вопросов</span>
-                                </div>
-                                <div class="value">
-                                    <span>+7(812) 111-11-11</span>
-                                    <span class="link">
-                                        <a href="#">vopr@ded.ru</a>
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Отдел сотрудничества</span>
-                                </div>
-                                <div class="value">
-                                    <span>+7(812) 111-11-11</span>
-                                    <span class="link">
-                                        <a href="#">vopr@ded.ru</a>
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="info-block">
-                    <div class="ct-block-title">
-                        <h3>Стать курьером</h3>
-                    </div>
-                    <div class="ct-content">
-                        <p class="ct-text">
-                            Чтобы стать курьером "ДоставкаЕД",  Вам необходимо заполнить специальную <a href="#">форму на сайте.</a>
-                        </p>
-                        <ul class="ct-list">
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Отдел кадров</span>
-                                </div>
-                                <div class="value">
-                                    <span>+7(812) 111-11-11</span>
-                                    <span class="link">
-                                        <a href="#">vopr@ded.ru</a>
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button class="not-active width">Подтвердить заказ</button>
             </div>
         </div>
     </main>

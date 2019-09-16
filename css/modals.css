@@ -1,0 +1,140 @@
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal .modal-window {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 480px;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 50px 40px 40px 40px;
+  position: relative;
+  border-radius: 7px;
+}
+
+.modal .modal-window .close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+}
+
+.modal .modal-window .title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.modal .modal-window .title h3 {
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal .modal-sign-in .content input {
+  height: 34px;
+  width: 100%;
+  border: 1px solid #D2D2D2;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
+.modal .modal-sign-in .content .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.modal .modal-sign-in .content .field .code-button {
+  min-width: 130px;
+  width: 130px;
+}
+
+.modal .modal-sign-in .content .info p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.modal .modal-sign-in .content .info p a {
+  color: #DE3E26;
+}
+
+.modal .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .time .select-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .time .select-day .tm {
+  margin-right: 15px;
+}
+
+.modal .time .select-day .tm:last-child {
+  margin-right: 0;
+}
+
+.modal .time .select-time {
+  margin-top: 20px;
+}
+
+.modal .time .select-time .selected {
+  color: #858585;
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.modal .time .select-time .selected.s-active {
+  color: #4B4B4B;
+  font-weight: 700;
+}
+/*# sourceMappingURL=modals.css.map */

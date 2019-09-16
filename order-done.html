@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/modals.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <header>
@@ -65,93 +66,31 @@
         <div class="container">
             <div class="my-data">
                 <div class="page-title">
-                    <h2>Контакты</h2>
+                    <h2>Ваш заказ принят в работу!</h2>
                 </div>
                 <div class="info-block">
-                    <div class="ct-block-title">
-                        <h3>Служба поддержки клиентов</h3>
+                    <div class="info-block-title">
+                        <h3>Информация по заказу</h3>
                     </div>
-                    <div class="ct-content">
-                        <ul class="ct-list">
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Санкт-Петербург</span>
+                    <div class="content">
+                        <ul class="delivery-info-list">
+                            <li class="di-item">
+                                <div class="image">
+                                    <img src="/img/map-c.svg" alt="map">
                                 </div>
-                                <div class="value">
-                                    <span>+7(812) 111-11-11</span>
-                                </div>
+                                <span>Ул. Матроса Железняка, 57</span>
                             </li>
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Москва</span>
+                            <li class="di-item">
+                                <div class="image">
+                                    <img src="/img/time.svg" alt="time">
                                 </div>
-                                <div class="value">
-                                    <span>+7(495) 111-11-11</span>
-                                </div>
-                            </li>
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Регионы</span>
-                                </div>
-                                <div class="value">
-                                    <span>+7(800) 111-11-11</span>
-                                </div>
+                                <span>Доставим до 16:30</span>
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="info-block">
-                    <div class="ct-block-title">
-                        <h3>По вопросам сотрудничества</h3>
-                    </div>
-                    <div class="ct-content">
-                        <ul class="ct-list">
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Отдел вопросов</span>
-                                </div>
-                                <div class="value">
-                                    <span>+7(812) 111-11-11</span>
-                                    <span class="link">
-                                        <a href="#">vopr@ded.ru</a>
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Отдел сотрудничества</span>
-                                </div>
-                                <div class="value">
-                                    <span>+7(812) 111-11-11</span>
-                                    <span class="link">
-                                        <a href="#">vopr@ded.ru</a>
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="info-block">
-                    <div class="ct-block-title">
-                        <h3>Стать курьером</h3>
-                    </div>
-                    <div class="ct-content">
-                        <p class="ct-text">
-                            Чтобы стать курьером "ДоставкаЕД",  Вам необходимо заполнить специальную <a href="#">форму на сайте.</a>
-                        </p>
-                        <ul class="ct-list">
-                            <li class="ct-item">
-                                <div class="name">
-                                    <span>Отдел кадров</span>
-                                </div>
-                                <div class="value">
-                                    <span>+7(812) 111-11-11</span>
-                                    <span class="link">
-                                        <a href="#">vopr@ded.ru</a>
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="action-button del-btn">
+                        <button class="active save">На главную</button>
+                        <button class="not-active">Отменить 4:37</button>
                     </div>
                 </div>
             </div>

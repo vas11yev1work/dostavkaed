@@ -105,6 +105,7 @@ header{
                     width: 100%;
                     background-color: $white;
                     border-radius: 4px;
+                    font-size: 14px;
                     box-shadow: 0 0 10px rgba(0,0,0,.16);
                     li{
                         cursor: pointer;
@@ -130,6 +131,71 @@ header{
         }
         .bars{
             display: none;
+        }
+    }
+}
+
+.mobile-header{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    &.open{
+        .header-block{
+            transform: translateX(0);
+        }
+        opacity: 1;
+        visibility: visible;
+    }
+    .header-block{
+        transition: 0.2s;
+        width: 220px;
+        background-color: $white;
+        height: 100%;
+        padding: 10px;
+        transform: translateX(-220px);
+        .close{
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+            button{
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                background-color: transparent;
+                border: none;
+                padding: 10px;
+                color: $gray;
+            }
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            .logo-i{
+                margin-right: 7px;
+            }
+        }
+        ul{
+            li{
+                margin-bottom: 15px;
+                a{
+                    display: flex;
+                    align-items: center;
+                    color: $black;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+            }
         }
     }
 }
@@ -188,6 +254,9 @@ header{
                         height: 30px;
                         width: 37px;
                     }
+                    img.i-name-c{
+                        height: 20px;
+                    }
                 }
             }
             .address-string{
@@ -232,5 +301,8 @@ header{
                 }
             }
         }
+    }
+    .mobile-header{
+        display: block;
     }
 }
