@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ДоставкаЕД - доставка еды из ресторанов в Санкт-Петербурге</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/css/default.css">
-    <link rel="stylesheet" href="/css/buttons.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/modals.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modals.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
@@ -21,23 +21,23 @@
                 <div class="header">
                     <div class="logo">
                         <a href="#" class="logo-link">
-                            <img src="/img/logo.svg" alt="logo" class="i-logo">
-                            <img src="/img/name.svg" alt="name" class="i-name">
+                            <img src="img/logo.svg" alt="logo" class="i-logo">
+                            <img src="img/name.svg" alt="name" class="i-name">
                         </a>
                     </div>
                     <div class="address-string">
                         <div class="search">
                             <input type="text" placeholder="Адрес доставки" class="address">
-                            <img src="/img/map.svg" alt="map" class="map">
+                            <img src="img/map.svg" alt="map" class="map">
                         </div>
                         <div class="time">
                             <div class="time-select">
                                 <div class="date">
-                                    <img src="/img/time.svg" alt="time">
+                                    <img src="img/time.svg" alt="time">
                                     <span>Сегодня</span>
                                 </div>
                                 <div class="arrow-down">
-                                    <img src="/img/arrow.svg" alt="arrow">
+                                    <img src="img/arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="transition"></div>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="bars">
                         <button class="menu-button" @click="mobile = !mobile">
-                            <img src="/img/bars.svg" alt="bars">
+                            <img src="img/bars.svg" alt="bars">
                         </button>
                     </div>
                 </div>
@@ -69,31 +69,31 @@
                     <button @click="mobile = !mobile">« Скрыть</button>
                 </div>
                 <div class="logo">
-                    <img src="/img/logo-black.svg" alt="logo" class="logo-i">
-                    <img src="/img/name-black.svg" alt="name">
+                    <img src="img/logo-black.svg" alt="logo" class="logo-i">
+                    <img src="img/name-black.svg" alt="name">
                 </div>
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="/img/rest.svg" alt="rest">
+                            <img src="img/rest.svg" alt="rest">
                             <h4>Рестораны</h4>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="/img/data.svg" alt="data">
+                            <img src="img/data.svg" alt="data">
                             <h4>Мои данные</h4>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="/img/orders.svg" alt="orders">
+                            <img src="img/orders.svg" alt="orders">
                             <h4>Мои заказ</h4>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="/img/sign-out.svg" alt="sign-out">
+                            <img src="img/sign-out.svg" alt="sign-out">
                             <h4>Выйти</h4>
                         </a>
                     </li>
@@ -104,7 +104,7 @@
             <div class="modal" :class="{ 'hide': !signIn }">
                 <div class="modal-window modal-sign-in">
                     <button class="close-button" @click="signIn = !signIn">
-                        <img src="/img/close.svg" alt="close">
+                        <img src="img/close.svg" alt="close">
                     </button>
                     <div class="title">
                         <h3>Чтобы войти, пожалуйста, укажите Ваш номер телефона</h3>
@@ -129,7 +129,7 @@
             <div class="modal" :class="{'hide': !time}">
                 <div class="modal-window time">
                     <button class="close-button" @click="time = !time">
-                            <img src="/img/close.svg" alt="close">
+                            <img src="img/close.svg" alt="close">
                     </button>
                     <div class="title">
                         <h3>Время доставки</h3>
@@ -216,7 +216,7 @@
                         <div class="other">
                             <button class="cat-button other-button">
                                 <span>Еще</span>
-                                <img src="/img/arrow.svg" alt="arrow">
+                                <img src="img/arrow.svg" alt="arrow">
                             </button>
                             <div class="transparent"></div>
                             <ul class="other-categories">
@@ -262,7 +262,7 @@
                     <div class="mobile-content">
                         <button class="open-cat-menu">
                             <span>Выбрать категорию</span>
-                            <img src="/img/arrow.svg" alt="arrow">
+                            <img src="img/arrow.svg" alt="arrow">
                         </button>
                     </div>
                 </div>
@@ -271,7 +271,7 @@
                 <div class="container">
                     <div class="content">
                         <input type="text" class="search" placeholder="Поиск блюд и ресторанов">
-                        <img src="/img/search.svg" alt="search">
+                        <img src="img/search.svg" alt="search">
                     </div>
                 </div>
             </div>
@@ -285,11 +285,11 @@
                             <li class="action-item">
                                 <a href="#" class="action-link">
                                     <div class="image-block">
-                                        <img src="/img/action.png" alt="action">
+                                        <img src="img/action.png" alt="action">
                                     </div>
                                     <div class="action-info-block">
                                         <div class="action-label">
-                                            <img src="/img/label.svg" alt="label">
+                                            <img src="img/label.svg" alt="label">
                                             <h4 class="action-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, non.</h4>
                                         </div>
                                         <p>При заказе от 1500 ₽ - в подарок мороженое</p>
@@ -299,11 +299,11 @@
                             <li class="action-item">
                                 <a href="#" class="action-link">
                                     <div class="image-block">
-                                        <img src="/img/action.png" alt="action">
+                                        <img src="img/action.png" alt="action">
                                     </div>
                                     <div class="action-info-block">
                                         <div class="action-label">
-                                            <img src="/img/label.svg" alt="label">
+                                            <img src="img/label.svg" alt="label">
                                             <h4 class="action-title">Cinnabon</h4>
                                         </div>
                                         <p>При заказе от 1500 ₽ - в подарок мороженое</p>
@@ -313,11 +313,11 @@
                             <li class="action-item">
                                 <a href="#" class="action-link">
                                     <div class="image-block">
-                                        <img src="/img/action.png" alt="action">
+                                        <img src="img/action.png" alt="action">
                                     </div>
                                     <div class="action-info-block">
                                         <div class="action-label">
-                                            <img src="/img/label.svg" alt="label">
+                                            <img src="img/label.svg" alt="label">
                                             <h4 class="action-title">Cinnabon</h4>
                                         </div>
                                         <p>При заказе от 1500 ₽ - в подарок мороженое</p>
@@ -327,11 +327,11 @@
                             <li class="action-item">
                                 <a href="#" class="action-link">
                                     <div class="image-block">
-                                        <img src="/img/action.png" alt="action">
+                                        <img src="img/action.png" alt="action">
                                     </div>
                                     <div class="action-info-block">
                                         <div class="action-label">
-                                            <img src="/img/label.svg" alt="label">
+                                            <img src="img/label.svg" alt="label">
                                             <h4 class="action-title">Cinnabon</h4>
                                         </div>
                                         <p>При заказе от 1500 ₽ - в подарок мороженое</p>
@@ -341,11 +341,11 @@
                             <li class="action-item">
                                 <a href="#" class="action-link">
                                     <div class="image-block">
-                                        <img src="/img/action.png" alt="action">
+                                        <img src="img/action.png" alt="action">
                                     </div>
                                     <div class="action-info-block">
                                         <div class="action-label">
-                                            <img src="/img/label.svg" alt="label">
+                                            <img src="img/label.svg" alt="label">
                                             <h4 class="action-title">Cinnabon</h4>
                                         </div>
                                         <p>При заказе от 1500 ₽ - в подарок мороженое</p>
@@ -355,11 +355,11 @@
                             <li class="action-item">
                                 <a href="#" class="action-link">
                                     <div class="image-block">
-                                        <img src="/img/action.png" alt="action">
+                                        <img src="img/action.png" alt="action">
                                     </div>
                                     <div class="action-info-block">
                                         <div class="action-label">
-                                            <img src="/img/label.svg" alt="label">
+                                            <img src="img/label.svg" alt="label">
                                             <h4 class="action-title">Cinnabon</h4>
                                         </div>
                                         <p>При заказе от 1500 ₽ - в подарок мороженое</p>
@@ -369,11 +369,11 @@
                             <li class="action-item">
                                 <a href="#" class="action-link">
                                     <div class="image-block">
-                                        <img src="/img/action.png" alt="action">
+                                        <img src="img/action.png" alt="action">
                                     </div>
                                     <div class="action-info-block">
                                         <div class="action-label">
-                                            <img src="/img/label.svg" alt="label">
+                                            <img src="img/label.svg" alt="label">
                                             <h4 class="action-title">Cinnabon</h4>
                                         </div>
                                         <p>При заказе от 1500 ₽ - в подарок мороженое</p>
@@ -394,14 +394,14 @@
                             <li class="restaurant">
                                 <a href="#" class="restaurant-item">
                                     <div class="restaurant-image">
-                                        <img src="/img/rest.png" alt="rest" class="rest">
-                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                        <img src="img/rest.png" alt="rest" class="rest">
+                                        <img src="img/label.svg" alt="label" class="rest-label">
                                     </div>
                                     <div class="restaurant-information">
                                         <div class="restaurant-title">
                                             <h4>Хинкали</h4>
                                             <div class="stars">
-                                                <img src="/img/star.svg" alt="star">
+                                                <img src="img/star.svg" alt="star">
                                                 <span class="count">4,4</span>
                                             </div>
                                         </div>
@@ -412,11 +412,11 @@
                                         </div>
                                         <div class="delivery-info">
                                             <div class="time delivery">
-                                                <img src="/img/our_courier.svg" alt="our">
+                                                <img src="img/our_courier.svg" alt="our">
                                                 <span>30-40 мин</span>
                                             </div>
                                             <div class="cost delivery">
-                                                <img src="/img/cost.svg" alt="cost">
+                                                <img src="img/cost.svg" alt="cost">
                                                 <span>От 1 ₽</span>
                                             </div>
                                         </div>
@@ -426,14 +426,14 @@
                             <li class="restaurant">
                                 <a href="#" class="restaurant-item">
                                     <div class="restaurant-image">
-                                        <img src="/img/rest.png" alt="rest" class="rest">
-                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                        <img src="img/rest.png" alt="rest" class="rest">
+                                        <img src="img/label.svg" alt="label" class="rest-label">
                                     </div>
                                     <div class="restaurant-information">
                                         <div class="restaurant-title">
                                             <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, itaque.</h4>
                                             <div class="stars">
-                                                <img src="/img/star.svg" alt="star">
+                                                <img src="img/star.svg" alt="star">
                                                 <span class="count">4,4</span>
                                             </div>
                                         </div>
@@ -444,11 +444,11 @@
                                         </div>
                                         <div class="delivery-info">
                                             <div class="time delivery">
-                                                <img src="/img/our_courier.svg" alt="our">
+                                                <img src="img/our_courier.svg" alt="our">
                                                 <span>30-40 мин</span>
                                             </div>
                                             <div class="cost delivery">
-                                                <img src="/img/cost.svg" alt="cost">
+                                                <img src="img/cost.svg" alt="cost">
                                                 <span>От 1 ₽</span>
                                             </div>
                                         </div>
@@ -458,14 +458,14 @@
                             <li class="restaurant">
                                 <a href="#" class="restaurant-item">
                                     <div class="restaurant-image">
-                                        <img src="/img/rest.png" alt="rest" class="rest">
-                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                        <img src="img/rest.png" alt="rest" class="rest">
+                                        <img src="img/label.svg" alt="label" class="rest-label">
                                     </div>
                                     <div class="restaurant-information">
                                         <div class="restaurant-title">
                                             <h4>Хинкали</h4>
                                             <div class="stars">
-                                                <img src="/img/star.svg" alt="star">
+                                                <img src="img/star.svg" alt="star">
                                                 <span class="count">4,4</span>
                                             </div>
                                         </div>
@@ -476,11 +476,11 @@
                                         </div>
                                         <div class="delivery-info">
                                             <div class="time delivery">
-                                                <img src="/img/our_courier.svg" alt="our">
+                                                <img src="img/our_courier.svg" alt="our">
                                                 <span>30-40 мин</span>
                                             </div>
                                             <div class="cost delivery">
-                                                <img src="/img/cost.svg" alt="cost">
+                                                <img src="img/cost.svg" alt="cost">
                                                 <span>От 1 ₽</span>
                                             </div>
                                         </div>
@@ -490,14 +490,14 @@
                             <li class="restaurant">
                                 <a href="#" class="restaurant-item">
                                     <div class="restaurant-image">
-                                        <img src="/img/rest.png" alt="rest" class="rest">
-                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                        <img src="img/rest.png" alt="rest" class="rest">
+                                        <img src="img/label.svg" alt="label" class="rest-label">
                                     </div>
                                     <div class="restaurant-information">
                                         <div class="restaurant-title">
                                             <h4>Хинкали</h4>
                                             <div class="stars">
-                                                <img src="/img/star.svg" alt="star">
+                                                <img src="img/star.svg" alt="star">
                                                 <span class="count">4,4</span>
                                             </div>
                                         </div>
@@ -508,11 +508,11 @@
                                         </div>
                                         <div class="delivery-info">
                                             <div class="time delivery">
-                                                <img src="/img/our_courier.svg" alt="our">
+                                                <img src="img/our_courier.svg" alt="our">
                                                 <span>30-40 мин</span>
                                             </div>
                                             <div class="cost delivery">
-                                                <img src="/img/cost.svg" alt="cost">
+                                                <img src="img/cost.svg" alt="cost">
                                                 <span>От 1 ₽</span>
                                             </div>
                                         </div>
@@ -522,14 +522,14 @@
                             <li class="restaurant">
                                 <a href="#" class="restaurant-item">
                                     <div class="restaurant-image">
-                                        <img src="/img/rest.png" alt="rest" class="rest">
-                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                        <img src="img/rest.png" alt="rest" class="rest">
+                                        <img src="img/label.svg" alt="label" class="rest-label">
                                     </div>
                                     <div class="restaurant-information">
                                         <div class="restaurant-title">
                                             <h4>Хинкали</h4>
                                             <div class="stars">
-                                                <img src="/img/star.svg" alt="star">
+                                                <img src="img/star.svg" alt="star">
                                                 <span class="count">4,4</span>
                                             </div>
                                         </div>
@@ -540,11 +540,11 @@
                                         </div>
                                         <div class="delivery-info">
                                             <div class="time delivery">
-                                                <img src="/img/our_courier.svg" alt="our">
+                                                <img src="img/our_courier.svg" alt="our">
                                                 <span>30-40 мин</span>
                                             </div>
                                             <div class="cost delivery">
-                                                <img src="/img/cost.svg" alt="cost">
+                                                <img src="img/cost.svg" alt="cost">
                                                 <span>От 1 ₽</span>
                                             </div>
                                         </div>
@@ -554,14 +554,14 @@
                             <li class="restaurant">
                                 <a href="#" class="restaurant-item">
                                     <div class="restaurant-image">
-                                        <img src="/img/rest.png" alt="rest" class="rest">
-                                        <img src="/img/label.svg" alt="label" class="rest-label">
+                                        <img src="img/rest.png" alt="rest" class="rest">
+                                        <img src="img/label.svg" alt="label" class="rest-label">
                                     </div>
                                     <div class="restaurant-information">
                                         <div class="restaurant-title">
                                             <h4>Хинкали</h4>
                                             <div class="stars">
-                                                <img src="/img/star.svg" alt="star">
+                                                <img src="img/star.svg" alt="star">
                                                 <span class="count">4,4</span>
                                             </div>
                                         </div>
@@ -572,11 +572,11 @@
                                         </div>
                                         <div class="delivery-info">
                                             <div class="time delivery">
-                                                <img src="/img/our_courier.svg" alt="our">
+                                                <img src="img/our_courier.svg" alt="our">
                                                 <span>30-40 мин</span>
                                             </div>
                                             <div class="cost delivery">
-                                                <img src="/img/cost.svg" alt="cost">
+                                                <img src="img/cost.svg" alt="cost">
                                                 <span>От 1 ₽</span>
                                             </div>
                                         </div>
@@ -597,7 +597,7 @@
                 <div class="clear">
                     <button>
                         <span>Очистить корзину</span>
-                        <img src="/img/trash.svg" alt="trash">
+                        <img src="img/trash.svg" alt="trash">
                     </button>
                 </div>
                 <div class="basket-body">
@@ -695,8 +695,8 @@
                     <div class="main-footer">
                         <div class="left">
                             <div class="logo">
-                                <img src="/img/footer_logo.svg" alt="logo" class="f-logo">
-                                <img src="/img/footer_name.svg" alt="name" class="f-name">
+                                <img src="img/footer_logo.svg" alt="logo" class="f-logo">
+                                <img src="img/footer_name.svg" alt="name" class="f-name">
                             </div>
                             <ul class="footer-pages">
                                 <li class="page">
@@ -716,31 +716,31 @@
                         <div class="right">
                             <div class="apps">
                                 <a href="#">
-                                    <img src="/img/android.svg" alt="android">
+                                    <img src="img/android.svg" alt="android">
                                 </a>
                                 <a href="#" class="hdn">
-                                    <img src="/img/ios.svg" alt="ios">
+                                    <img src="img/ios.svg" alt="ios">
                                 </a>
                             </div>
                             <ul class="networks">
                                 <li class="network">
                                     <a href="#">
-                                        <img src="/img/vk.svg" alt="vk">
+                                        <img src="img/vk.svg" alt="vk">
                                     </a>
                                 </li>
                                 <li class="network">
                                     <a href="#">
-                                        <img src="/img/ig.svg" alt="ig">
+                                        <img src="img/ig.svg" alt="ig">
                                     </a>
                                 </li>
                                 <li class="network">
                                     <a href="#">
-                                        <img src="/img/tg.svg" alt="tg">
+                                        <img src="img/tg.svg" alt="tg">
                                     </a>
                                 </li>
                                 <li class="network">
                                     <a href="#">
-                                        <img src="/img/fb.svg" alt="fb">
+                                        <img src="img/fb.svg" alt="fb">
                                     </a>
                                 </li>
                             </ul>
@@ -759,34 +759,34 @@
                 <div class="mobile-footer">
                     <div class="logo">
                         <div class="eda-logo">
-                            <img src="/img/footer_logo.svg" alt="logo" class="fm-logo">
-                            <img src="/img/footer_name.svg" alt="name" class="fm-name">
+                            <img src="img/footer_logo.svg" alt="logo" class="fm-logo">
+                            <img src="img/footer_name.svg" alt="name" class="fm-name">
                         </div>
                         <div class="mb-apps">
-                            <img src="/img/android.svg" alt="android">
-                            <img src="/img/ios.svg" alt="ios" class="hdn">
+                            <img src="img/android.svg" alt="android">
+                            <img src="img/ios.svg" alt="ios" class="hdn">
                         </div>
                     </div>
                     <hr class="line">
                     <ul class="networks">
                         <li class="network">
                             <a href="#">
-                                <img src="/img/vk.svg" alt="vk">
+                                <img src="img/vk.svg" alt="vk">
                             </a>
                         </li>
                         <li class="network">
                             <a href="#">
-                                <img src="/img/ig.svg" alt="ig">
+                                <img src="img/ig.svg" alt="ig">
                             </a>
                         </li>
                         <li class="network">
                             <a href="#">
-                                <img src="/img/tg.svg" alt="tg">
+                                <img src="img/tg.svg" alt="tg">
                             </a>
                         </li>
                         <li class="network">
                             <a href="#">
-                                <img src="/img/fb.svg" alt="fb">
+                                <img src="img/fb.svg" alt="fb">
                             </a>
                         </li>
                     </ul>
